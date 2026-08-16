@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Laberinto del Olimpo · Evaluación de Lógica</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['\\[','\\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        tags: 'none'
+      },
+      svg: {
+        fontCache: 'global',
+        scale: 1.08,
+        mtextInheritFont: false,
+        merrorInheritFont: true
+      },
+      options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+    };
+  </script>
+  <script defer src="mathjax/tex-svg-full.js"></script>
+</head>
+<body>
+  <main id="app">
+    <section id="menu" class="screen active">
+      <div class="menu-card parchment">
+        <div class="seal">Ω</div>
+        <h1>Laberinto del Olimpo</h1>
+        <p class="subtitle">Dioses griegos · Lógica proposicional · Cuantificadores · Demostraciones</p>
+        <div class="practice-badge">EVALUACIÓN SCORM · BRIGHTSPACE · SIN BLOQUEOS</div>
+        <p class="intro compact-intro">Recorre el Olimpo, recupera cuatro reliquias de los dioses y llega al Templo de la Razón. La nota final se calcula sobre 5.0 y se envía automáticamente a Brightspace mediante SCORM 1.2.</p>
+        <p class="choose-label">Elige tu ficha</p>
+        <div class="animal-picker" aria-label="Selección de dios o diosa del Olimpo">
+          <button class="animal-choice selected" data-animal="⚡">⚡ Zeus</button>
+          <button class="animal-choice" data-animal="🦉">🦉 Atenea</button>
+          <button class="animal-choice" data-animal="🔱">🔱 Poseidón</button>
+          <button class="animal-choice" data-animal="☀️">☀️ Apolo</button>
+          <button class="animal-choice" data-animal="🏹">🏹 Artemisa</button>
+          <button class="animal-choice" data-animal="🪽">🪽 Hermes</button>
+          <button class="animal-choice" data-animal="🔥">🔥 Hades</button>
+          <button class="animal-choice" data-animal="👑">👑 Hera</button>
+        </div>
+
+        <div class="menu-theme-compact">
+          <div class="menu-theme-copy">
+            <strong>Temas de la evaluación</strong>
+            <span id="menuThemeSummary">4 temas seleccionados · 134 preguntas disponibles</span>
+          </div>
+          <button id="chooseThemesBtn" class="secondary theme-open-btn" type="button">Elegir temas</button>
+        </div>
+
+        <div class="menu-actions">
+          <button id="startBtn" class="primary" type="button">Iniciar evaluación en el Olimpo</button>
+          <button id="howBtn" class="secondary">Cómo jugar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="themeModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
+      <div class="modal-box parchment theme-modal-box">
+        <div class="theme-modal-heading">
+          <div>
+            <span class="badge">Temas</span>
+            <h2 id="themeModalTitle">Elige los temas que se evaluarán</h2>
+            <p>Puedes seleccionar uno, varios o los cuatro. El banco de preguntas de la partida se filtrará con esta selección.</p>
+          </div>
+        </div>
+        <div class="theme-selector theme-selector-modal" aria-labelledby="themeModalTitle">
+          <div class="theme-selector-head">
+            <div class="theme-help"><strong>Banco unificado:</strong> selecciona los bloques que quieres incluir.</div>
+            <div class="theme-actions">
+              <button id="selectAllThemesBtn" class="mini-theme-btn" type="button">Seleccionar todos</button>
+              <button id="clearThemesBtn" class="mini-theme-btn" type="button">Limpiar</button>
+            </div>
+          </div>
+          <div class="theme-grid">
+            <label class="theme-card selected"><input class="theme-checkbox" type="checkbox" value="fundamentos" checked><span class="theme-icon">∧∨</span><span><strong>1. Proposiciones, conectores y equivalencias</strong><small>Formalización, tablas de verdad, álgebra proposicional, tautologías y equivalencias.</small></span></label>
+            <label class="theme-card selected"><input class="theme-checkbox" type="checkbox" value="inferencia" checked><span class="theme-icon">⊢</span><span><strong>2. Argumentos y reglas de inferencia</strong><small>Validez, modus ponens, modus tollens, silogismos y argumentación.</small></span></label>
+            <label class="theme-card selected"><input class="theme-checkbox" type="checkbox" value="cuantificadores" checked><span class="theme-icon">∀∃</span><span><strong>3. Cuantificadores</strong><small>Cuantificadores universales y existenciales, negaciones y formalización.</small></span></label>
+            <label class="theme-card selected"><input class="theme-checkbox" type="checkbox" value="demostraciones" checked><span class="theme-icon">∴</span><span><strong>4. Métodos de demostración</strong><small>Prueba directa, contrapositiva, contradicción, casos, contraejemplos y bicondicionales.</small></span></label>
+          </div>
+          <div id="themeSelectionSummary" class="theme-summary">4 temas seleccionados · 134 preguntas disponibles</div>
+        </div>
+        <div class="modal-actions">
+          <button id="saveThemesBtn" class="primary" type="button">Guardar selección</button>
+          <button id="closeThemesBtn" class="secondary" type="button">Cerrar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="screen">
+      <header class="hud">
+        <div class="hud-block"><small>Aciertos</small><strong id="scoreHud">0/0</strong></div>
+        <div class="hud-block treasure-status"><small>Reliquias</small><strong id="treasureHud">0/4</strong></div>
+        <div class="hud-block"><small>Pasos</small><strong id="stepsHud">0</strong></div>
+        <div class="hud-block"><small>Dificultad</small><strong id="difficultyHud">Básico</strong></div>
+        <div class="hud-block compass-hud"><small>Brújula</small><strong id="compassHud">↗ Busca reliquia</strong></div>
+        <div class="hud-block clock-hud"><small>Hora</small><strong id="clockHud">--:--:--</strong></div>
+        <div class="hud-actions">
+          <button id="howGameBtn" class="small-btn">Cómo jugar</button>
+          <button id="finishBtn" class="small-btn danger" type="button">Finalizar juego</button>
+          <button id="mainMenuBtn" class="small-btn">Menú principal</button>
+        </div>
+      </header>
+      <div class="game-layout">
+        <div class="canvas-panel">
+          <canvas id="gameCanvas" aria-label="Laberinto del Olimpo para evaluación de lógica"></canvas>
+          <div class="canvas-caption">
+            Usa flechas o WASD en computador. En tablet o celular se activan flechas táctiles especiales. El laberinto rectangular se adapta a toda la pantalla disponible.
+          </div>
+          <div id="touchControls" class="touch-controls hidden" aria-label="Controles táctiles del laberinto">
+            <button class="touch-btn touch-up" data-key="ArrowUp" type="button" aria-label="Mover arriba">▲</button>
+            <button class="touch-btn touch-left" data-key="ArrowLeft" type="button" aria-label="Mover izquierda">◀</button>
+            <button class="touch-btn touch-center" id="touchFullscreenBtn" type="button" aria-label="Reingresar en pantalla completa">⛶</button>
+            <button class="touch-btn touch-right" data-key="ArrowRight" type="button" aria-label="Mover derecha">▶</button>
+            <button class="touch-btn touch-down" data-key="ArrowDown" type="button" aria-label="Mover abajo">▼</button>
+          </div>
+        </div>
+        <aside class="side-panel parchment">
+          <h2>Expedición del Olimpo</h2>
+          <div id="missionText" class="mission-text">Busca las cuatro reliquias sagradas de Atenea, Zeus, Poseidón y Apolo.</div>
+          <div class="legend">
+            <div><span>🦉</span> Égida de Atenea: reto avanzado del tema seleccionado.</div>
+            <div><span>⚡</span> Rayo de Zeus: reto avanzado del tema seleccionado.</div>
+            <div><span>🔱</span> Tridente de Poseidón: reto avanzado del tema seleccionado.</div>
+            <div><span>☀️</span> Lira de Apolo: reto avanzado del tema seleccionado.</div>
+            <div><span>🌀</span> Portal de Hermes: te transporta a otra cámara.</div>
+            <div><span>Ω</span> Estela lógica: pregunta de mayor dificultad.</div>
+            <div><span>⚡</span> Discordia de Eris: regenera el laberinto; el intento queda registrado.</div>
+            <div><span>🏛️</span> Templo de la Razón: meta final de la evaluación.</div>
+            <div><span>🛡️</span> Guardianes del Olimpo: retos avanzados del corredor final.</div>
+          </div>
+          <h3>Registro</h3>
+          <div id="eventLog" class="event-log"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <section id="questionModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box question-box quiz-reference-ui">
+      <div class="question-head quiz-question-hero">
+        <div class="quiz-heading-group">
+          <div class="quiz-hero-mark">Ω</div>
+          <div>
+            <span id="questionBadge" class="badge">Básico</span>
+            <h2 id="questionTitle">Pregunta</h2>
+            <div class="quiz-subtitle">Laberinto del Olimpo · Evaluación de lógica</div>
+          </div>
+        </div>
+        <button id="hintBtn" class="secondary compact quiz-hint-button">Ver pista</button>
+      </div>
+      <div class="quiz-question-body">
+        <div id="questionText" class="question-text math-book"></div>
+        <div id="hintText" class="hint-text hidden math-book"></div>
+        <form id="answerForm" class="answers"></form>
+        <div id="feedbackBox" class="feedback hidden math-book"></div>
+        <div class="modal-actions quiz-modal-actions">
+          <button id="submitAnswerBtn" class="primary" type="button">Responder</button>
+          <button id="continueBtn" class="secondary hidden" type="button">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="howModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box parchment how-box">
+      <h2>Cómo jugar</h2>
+      <div class="how-content math-book">
+        <p><strong>Laberinto del Olimpo</strong> es una evaluación SCORM 1.2 para Brightspace. No utiliza contraseña docente ni bloqueos de seguridad. Al completar el juego, la nota se calcula sobre <strong>5.0</strong>, se envía a Brightspace y se genera un informe detallado.</p>
+        <p>Antes de iniciar, usa el botón <strong>Elegir temas</strong> del menú para seleccionar los bloques que serán evaluados. Muévete con las flechas o con \(W,A,S,D\). Explora el laberinto, encuentra las cuatro reliquias de <strong>Atenea, Zeus, Poseidón y Apolo</strong>, y después alcanza el Templo de la Razón.</p>
+        <ul>
+          <li>Cada cierto número de pasos aparece una pregunta del banco seleccionado.</li>
+          <li>Las <strong>reliquias</strong> presentan retos de mayor dificultad tomados únicamente de los temas seleccionados.</li>
+          <li>Las <strong>estelas</strong> y los <strong>guardianes del Olimpo</strong> contienen retos de dificultad media y avanzada.</li>
+          <li>Las <strong>trampas de Eris</strong> pueden regenerar el laberinto; los intentos incorrectos sí quedan registrados en el cálculo de precisión.</li>
+          <li>Las preguntas normales permiten usar <strong>pista</strong>. Tras responder se muestra retroalimentación y la respuesta queda registrada para el informe final.</li>
+          <li>El banco unificado contiene <strong>134 preguntas</strong> provenientes de los dos juegos originales. La selección de temas filtra el banco antes de cada partida.</li>
+          <li>Al completar el Templo de la Razón o pulsar <strong>Finalizar juego</strong>, el informe aparece en pantalla, se intenta descargar automáticamente y queda disponible un botón de descarga manual.</li>
+        </ul>
+        <p>Los temas incluyen proposiciones y formalización, conectores, tablas de verdad, álgebra proposicional, equivalencias y leyes lógicas, tautologías y contradicciones, validez de argumentos, reglas de inferencia, cuantificadores, contraejemplos y métodos de demostración.</p>
+      </div>
+      <button id="closeHowBtn" class="primary">Entendido</button>
+    </div>
+  </section>
+
+  <section id="endModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box parchment end-box">
+      <h2 id="endTitle">Evaluación finalizada</h2>
+      <div id="endSummary" class="math-book"></div>
+      <div class="modal-actions report-actions">
+        <button id="downloadReportBtn" class="primary" type="button">Descargar informe</button>
+        <button id="restartBtn" class="secondary" type="button">Volver al menú</button>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="deviceClock" class="device-clock" aria-live="polite">
+    <span class="clock-label">Hora del dispositivo</span>
+    <strong id="deviceClockValue">--:--:--</strong>
+  </div>
+
+  <script src="scorm.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

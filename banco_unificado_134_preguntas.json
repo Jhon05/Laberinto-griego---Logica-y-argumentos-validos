@@ -1,0 +1,2440 @@
+[
+  {
+    "id": "OM-01",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Selección múltiple",
+    "prompt": "Considere el argumento\n    \\[\n      P\\to Q,\\qquad P.\n    \\]\n    ¿Cuál conclusión se obtiene válidamente?",
+    "options": [
+      "\\(Q\\)",
+      "\\(\\neg Q\\)",
+      "\\(\\neg P\\)",
+      "\\(Q\\to P\\)"
+    ],
+    "answer": "\\(Q\\)",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Es una aplicación directa de modus ponens.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-02",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Selección múltiple",
+    "prompt": "Considere\n    \\[\n      P\\to Q,\\qquad \\neg Q.\n    \\]\n    ¿Qué regla permite concluir \\(\\neg P\\)?",
+    "options": [
+      "Modus ponens",
+      "Modus tollens",
+      "Silogismo disyuntivo",
+      "Adjunción"
+    ],
+    "answer": "Modus tollens",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "De \\(P\\to Q\\) y \\(\\neg Q\\) se deduce \\(\\neg P\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-03",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Selección múltiple",
+    "prompt": "¿Cuál de los siguientes esquemas representa un silogismo hipotético válido?",
+    "options": [
+      "\\(P\\to Q,\\ Q\\to R\\ \\therefore\\ P\\to R\\)",
+      "\\(P\\to Q,\\ Q\\ \\therefore\\ P\\)",
+      "\\(P\\lor Q,\\ P\\ \\therefore\\ Q\\)",
+      "\\(P\\to Q,\\ \\neg P\\ \\therefore\\ \\neg Q\\)"
+    ],
+    "answer": "\\(P\\to Q,\\ Q\\to R\\ \\therefore\\ P\\to R\\)",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Se encadenan dos implicaciones.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-04",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Cuantificadores",
+    "title": "Selección múltiple",
+    "prompt": "La negación correcta de\n    \\[\n      \\forall x\\in\\mathbb{Z},\\qquad x^2\\ge 0\n    \\]\n    es:",
+    "options": [
+      "\\(\\forall x\\in\\mathbb{Z},\\ x^2\\lt 0\\)",
+      "\\(\\exists x\\in\\mathbb{Z},\\ x^2\\lt 0\\)",
+      "\\(\\exists x\\in\\mathbb{Z},\\ x^2\\ge0\\)",
+      "\\(\\forall x\\in\\mathbb{Z},\\ x^2\\le0\\)"
+    ],
+    "answer": "\\(\\exists x\\in\\mathbb{Z},\\ x^2<0\\)",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Se usa \\(\\neg(\\forall x\\,P(x))\\equiv\\exists x\\,\\neg P(x)\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-05",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Cuantificadores",
+    "title": "Selección múltiple",
+    "prompt": "¿Cuál formalización expresa correctamente “Para cada entero \\(k\\), existe un entero \\(w\\) tal que \\(k\\mid w\\)”?",
+    "options": [
+      "\\(\\exists k\\in\\mathbb{Z}\\,\\forall w\\in\\mathbb{Z}:\\ k\\mid w\\)",
+      "\\(\\forall k\\in\\mathbb{Z}\\,\\exists w\\in\\mathbb{Z}:\\ k\\mid w\\)",
+      "\\(\\exists w\\in\\mathbb{Z}\\,\\forall k\\in\\mathbb{Z}:\\ w\\mid k\\)",
+      "\\(\\forall w\\in\\mathbb{Z}\\,\\exists k\\in\\mathbb{Z}:\\ w\\mid k\\)"
+    ],
+    "answer": "\\(\\forall k\\in\\mathbb{Z}\\,\\exists w\\in\\mathbb{Z}:\\ k\\mid w\\)",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "El orden de los cuantificadores es esencial.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-06",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Selección múltiple",
+    "prompt": "Para demostrar directamente que si \\(n\\) es par, entonces \\(3n\\) es par, el primer paso natural es escribir:",
+    "options": [
+      "\\(n=2k\\) para algún \\(k\\in\\mathbb{Z}\\)",
+      "\\(n=2k+1\\) para algún \\(k\\in\\mathbb{Z}\\)",
+      "\\(3n=2k+1\\)",
+      "\\(n^2=2k\\)"
+    ],
+    "answer": "\\(n=2k\\) para algún \\(k\\in\\mathbb{Z}\\)",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Se empieza usando la definición de número par.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-07",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Selección múltiple",
+    "prompt": "Para refutar la afirmación\n    \\[\n      \\forall x\\in\\mathbb{R},\\qquad x^2\\gt x,\n    \\]\n    basta encontrar:",
+    "options": [
+      "Un caso donde la desigualdad sea verdadera",
+      "Un contraejemplo real para el cual la desigualdad falle",
+      "Una demostración por contradicción",
+      "Todos los reales en \\([0,1]\\)"
+    ],
+    "answer": "Un contraejemplo real para el cual la desigualdad falle",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Una afirmación universal se refuta con un solo contraejemplo; por ejemplo \\(x=\\frac{1}{2}\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-08",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Contraposición y contradicción",
+    "title": "Selección múltiple",
+    "prompt": "La contrapositiva de\n    \\[\n      \\text{“Si }n^2\\text{ es par, entonces }n\\text{ es par”}\n    \\]\n    es:",
+    "options": [
+      "Si \\(n\\) es par, entonces \\(n^2\\) es par.",
+      "Si \\(n\\) no es par, entonces \\(n^2\\) no es par.",
+      "Si \\(n^2\\) no es par, entonces \\(n\\) no es par.",
+      "Si \\(n\\) es impar, entonces \\(n^2\\) es par."
+    ],
+    "answer": "Si \\(n\\) no es par, entonces \\(n^2\\) no es par.",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "La contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-09",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Contraposición y contradicción",
+    "title": "Selección múltiple",
+    "prompt": "En una prueba por contradicción de que \\(\\sqrt{2}\\) es irracional, se supone inicialmente:",
+    "options": [
+      "\\(\\sqrt{2}\\) es irracional",
+      "\\(\\sqrt{2}\\) es racional",
+      "\\(\\sqrt{2}\\) es entero",
+      "\\(\\sqrt{2}\\lt 0\\)"
+    ],
+    "answer": "\\(\\sqrt{2}\\) es racional",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Se asume la negación de la conclusión que se quiere probar.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-10",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Selección múltiple",
+    "prompt": "Para probar\n    \\[\n      P\\iff Q,\n    \\]\n    la estructura estándar exige demostrar:",
+    "options": [
+      "Solo \\(P\\to Q\\)",
+      "Solo \\(Q\\to P\\)",
+      "\\(P\\to Q\\) y \\(Q\\to P\\)",
+      "\\(\\neg P\\to\\neg Q\\) únicamente"
+    ],
+    "answer": "\\(P\\to Q\\) y \\(Q\\to P\\)",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Un bicondicional requiere ambas implicaciones.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-11",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Selección múltiple",
+    "prompt": "Para demostrar una identidad que depende del signo de \\(x\\), ¿qué partición de casos es exhaustiva?",
+    "options": [
+      "\\(x\\gt 0\\) o \\(x\\lt 0\\)",
+      "\\(x\\ge0\\) o \\(x\\lt 0\\)",
+      "\\(x\\gt 1\\) o \\(x\\lt 1\\)",
+      "\\(x\\in\\mathbb{Q}\\) o \\(x\\gt 0\\)"
+    ],
+    "answer": "\\(x\\ge0\\) o \\(x<0\\)",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Los dos casos cubren todos los números reales y son disjuntos.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "OM-12",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Teoremas notables",
+    "title": "Selección múltiple",
+    "prompt": "¿Cuál técnica suele ser especialmente natural para demostrar que una ecuación diofántica no tiene soluciones enteras bajo cierta condición de divisibilidad?",
+    "options": [
+      "Contraejemplo solamente",
+      "Contradicción",
+      "Tabla de verdad completa",
+      "Diagrama de Venn solamente"
+    ],
+    "answer": "Contradicción",
+    "hint": "Reconoce primero la forma lógica del resultado y luego elige una estrategia adecuada: directa, contraposición, contradicción, casos o doble implicación.",
+    "solution": "Si se supone que existe una solución y la divisibilidad fuerza una imposibilidad, la contradicción es natural.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-01",
+    "difficulty": "basico",
+    "type": "tf",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Verdadero o falso",
+    "prompt": "De \\(P\\to Q\\) y \\(Q\\) se puede concluir válidamente \\(P\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Falso",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Eso es afirmar el consecuente, una falacia.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-02",
+    "difficulty": "medio",
+    "type": "tf",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Verdadero o falso",
+    "prompt": "De \\(P\\lor Q\\) y \\(\\neg P\\) se puede concluir \\(Q\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Es silogismo disyuntivo.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-03",
+    "difficulty": "basico",
+    "type": "tf",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Verdadero o falso",
+    "prompt": "Un argumento puede ser válido aunque alguna premisa sea falsa.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "La validez depende de la forma: no puede haber premisas todas verdaderas y conclusión falsa.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-04",
+    "difficulty": "medio",
+    "type": "tf",
+    "topic": "Cuantificadores",
+    "title": "Verdadero o falso",
+    "prompt": "\\(\\neg(\\exists x\\,P(x))\\equiv \\forall x\\,\\neg P(x)\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Es una ley estándar de negación de cuantificadores.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-05",
+    "difficulty": "basico",
+    "type": "tf",
+    "topic": "Cuantificadores",
+    "title": "Verdadero o falso",
+    "prompt": "\\(\\forall x\\,\\exists y\\,P(x,y)\\) siempre equivale a \\(\\exists y\\,\\forall x\\,P(x,y)\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Falso",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "El orden de cuantificadores generalmente cambia el significado.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-06",
+    "difficulty": "medio",
+    "type": "tf",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Verdadero o falso",
+    "prompt": "Para refutar una afirmación existencial basta encontrar un solo objeto que no satisfaga la propiedad.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Falso",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Eso no refuta una existencia; habría que demostrar que ningún objeto del dominio satisface la propiedad.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-07",
+    "difficulty": "basico",
+    "type": "tf",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Verdadero o falso",
+    "prompt": "Para probar directamente \\(P\\to Q\\), se asume \\(P\\) y se deduce \\(Q\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Esa es la estructura básica de la prueba directa.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-08",
+    "difficulty": "medio",
+    "type": "tf",
+    "topic": "Contraposición y contradicción",
+    "title": "Verdadero o falso",
+    "prompt": "La contrapositiva de \\(P\\to Q\\) es lógicamente equivalente a \\(P\\to Q\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Ambas proposiciones tienen la misma tabla de verdad.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-09",
+    "difficulty": "basico",
+    "type": "tf",
+    "topic": "Contraposición y contradicción",
+    "title": "Verdadero o falso",
+    "prompt": "En una prueba por contradicción de \\(P\\), se supone \\(P\\) y se busca una contradicción.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Falso",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Se debe suponer \\(\\neg P\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-10",
+    "difficulty": "medio",
+    "type": "tf",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Verdadero o falso",
+    "prompt": "En una prueba por casos es suficiente analizar algunos casos representativos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Falso",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Los casos deben cubrir exhaustivamente todas las posibilidades.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-11",
+    "difficulty": "basico",
+    "type": "tf",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Verdadero o falso",
+    "prompt": "“\\(P\\) es suficiente para \\(Q\\)” se formaliza como \\(P\\to Q\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Que \\(P\\) sea suficiente significa que \\(P\\) garantiza \\(Q\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "VF-12",
+    "difficulty": "medio",
+    "type": "tf",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Verdadero o falso",
+    "prompt": "“\\(P\\) es necesario para \\(Q\\)” se formaliza como \\(Q\\to P\\).",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "answer": "Verdadero",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Si \\(Q\\) ocurre, entonces necesariamente \\(P\\) debe ocurrir.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-01",
+    "difficulty": "medio",
+    "type": "numeric",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Respuesta numérica",
+    "prompt": "¿Cuántas filas tiene la tabla de verdad de una proposición que involucra exactamente \\(4\\) variables proposicionales distintas?",
+    "options": [],
+    "answer": "16",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Una tabla con \\(n\\) variables tiene \\(2^n\\) filas; \\(2^4=16\\).",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-02",
+    "difficulty": "avanzado",
+    "type": "numeric",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Respuesta numérica",
+    "prompt": "¿Cuántas valuaciones hacen falsa la implicación \\(P\\to Q\\)?",
+    "options": [],
+    "answer": "1",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Solo es falsa cuando \\(P\\) es verdadera y \\(Q\\) es falsa.",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-03",
+    "difficulty": "medio",
+    "type": "numeric",
+    "topic": "Cuantificadores",
+    "title": "Respuesta numérica",
+    "prompt": "En el dominio \\(\\{1,2,3,4,5,6\\}\\), ¿cuántos valores satisfacen \\(x\\mid 6\\)?",
+    "options": [],
+    "answer": "4",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Los divisores positivos de \\(6\\) en el dominio son \\(1,2,3,6\\).",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-04",
+    "difficulty": "avanzado",
+    "type": "numeric",
+    "topic": "Cuantificadores",
+    "title": "Respuesta numérica",
+    "prompt": "En \\(D=\\{-2,-1,0,1,2\\}\\), ¿cuántos elementos satisfacen \\(x^2\\lt 2\\)?",
+    "options": [],
+    "answer": "3",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Los valores son \\(-1,0,1\\).",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-05",
+    "difficulty": "medio",
+    "type": "numeric",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Respuesta numérica",
+    "prompt": "¿Cuál es el menor entero no negativo que sirve como contraejemplo para\n    \\[\n      \\forall n\\in\\mathbb{Z}_{\\ge0},\\qquad n^2\\gt n?\n    \\]",
+    "options": [],
+    "answer": "0",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Para \\(n=0\\), \\(0^2\\gt 0\\) es falso.",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-06",
+    "difficulty": "avanzado",
+    "type": "numeric",
+    "topic": "Contraposición y contradicción",
+    "title": "Respuesta numérica",
+    "prompt": "Si \\(n=2k+1\\), al expandir \\(n^2\\) se obtiene\n    \\[\n      n^2=4k^2+4k+1=2(\\,\\square\\,)+1.\n    \\]\n    Escriba el valor de la expresión dentro del paréntesis cuando \\(k=3\\).",
+    "options": [],
+    "answer": "24",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Dentro del paréntesis aparece \\(2k^2+2k\\); para \\(k=3\\) vale \\(18+6=24\\).",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-07",
+    "difficulty": "medio",
+    "type": "numeric",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Respuesta numérica",
+    "prompt": "Para una demostración por casos basada únicamente en la paridad de dos enteros \\(m,n\\), ¿cuántos casos elementales hay?",
+    "options": [],
+    "answer": "4",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "\\((\\text{par,par}),(\\text{par,impar}),(\\text{impar,par}),(\\text{impar,impar})\\).",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "RN-08",
+    "difficulty": "avanzado",
+    "type": "numeric",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Respuesta numérica",
+    "prompt": "Una prueba de equivalencia entre tres afirmaciones \\(P,Q,R\\) puede establecerse mediante el ciclo\n    \\[\n      P\\to Q,\\qquad Q\\to R,\\qquad R\\to P.\n    \\]\n    ¿Cuántas implicaciones se prueban en este esquema?",
+    "options": [],
+    "answer": "3",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Se prueban tres implicaciones que cierran el ciclo lógico.",
+    "tolerance": 1e-09,
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-01",
+    "difficulty": "bono",
+    "type": "choice",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Selección múltiple",
+    "prompt": "Complete: de \\(P\\to Q\\) y \\(P\\), la regla utilizada es ________.",
+    "options": [
+      "modus ponens",
+      "modus tollens",
+      "silogismo disyuntivo",
+      "silogismo hipotético"
+    ],
+    "answer": "modus ponens",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Regla básica de inferencia.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-02",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Selección múltiple",
+    "prompt": "Complete: de \\(P\\lor Q\\) y \\(\\neg P\\), la regla utilizada es silogismo ________.",
+    "options": [
+      "disyuntivo",
+      "hipotético",
+      "categórico",
+      "conjuntivo"
+    ],
+    "answer": "disyuntivo",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Se elimina la alternativa falsa.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-03",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Cuantificadores",
+    "title": "Selección múltiple",
+    "prompt": "El símbolo \\(\\forall\\) representa el cuantificador ________.",
+    "options": [
+      "universal",
+      "existencial",
+      "condicional",
+      "bicondicional"
+    ],
+    "answer": "universal",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Se lee “para todo”.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-04",
+    "difficulty": "bono",
+    "type": "choice",
+    "topic": "Cuantificadores",
+    "title": "Selección múltiple",
+    "prompt": "El símbolo \\(\\exists\\) representa el cuantificador ________.",
+    "options": [
+      "existencial",
+      "universal",
+      "negativo",
+      "disyuntivo"
+    ],
+    "answer": "existencial",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Se lee “existe”.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-05",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Selección múltiple",
+    "prompt": "Un ejemplo que hace falsa una afirmación universal se denomina ________.",
+    "options": [
+      "contraejemplo",
+      "tautología",
+      "premisa",
+      "bicondicional"
+    ],
+    "answer": "contraejemplo",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Uno solo basta para refutar la universalidad.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-06",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Contraposición y contradicción",
+    "title": "Selección múltiple",
+    "prompt": "La proposición \\(\\neg Q\\to\\neg P\\) se llama ________ de \\(P\\to Q\\).",
+    "options": [
+      "contrapositiva",
+      "recíproca",
+      "inversa",
+      "contradicción"
+    ],
+    "answer": "contrapositiva",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Es lógicamente equivalente al condicional original.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-07",
+    "difficulty": "bono",
+    "type": "choice",
+    "topic": "Contraposición y contradicción",
+    "title": "Selección múltiple",
+    "prompt": "En una prueba por ________ se asume la negación de la conclusión y se deriva una imposibilidad.",
+    "options": [
+      "contradicción",
+      "inducción",
+      "casos",
+      "contraejemplo"
+    ],
+    "answer": "contradicción",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "La contradicción fuerza la validez de la conclusión.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-08",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Selección múltiple",
+    "prompt": "El símbolo \\(\\iff\\) se lee “si y solo ________”.",
+    "options": [
+      "si",
+      "no",
+      "entonces",
+      "solamente"
+    ],
+    "answer": "si",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Representa equivalencia lógica.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-09",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Selección múltiple",
+    "prompt": "Si \\(P\\to Q\\), entonces \\(P\\) es condición ________ para \\(Q\\).",
+    "options": [
+      "suficiente",
+      "necesaria",
+      "contradictoria",
+      "existencial"
+    ],
+    "answer": "suficiente",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "La verdad de \\(P\\) garantiza \\(Q\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "PC-10",
+    "difficulty": "bono",
+    "type": "choice",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Selección múltiple",
+    "prompt": "Si \\(P\\to Q\\), entonces \\(Q\\) es condición ________ para \\(P\\).",
+    "options": [
+      "necesaria",
+      "suficiente",
+      "universal",
+      "disyuntiva"
+    ],
+    "answer": "necesaria",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Si \\(P\\) ocurre, \\(Q\\) debe ocurrir.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-01",
+    "difficulty": "avanzado",
+    "type": "statements",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Respecto de reglas de inferencia, determine cuáles afirmaciones son correctas.<ol class=\"roman\"><li>De \\(P\\to Q\\) y \\(P\\) se obtiene \\(Q\\).</li><li>De \\(P\\to Q\\) y \\(\\neg Q\\) se obtiene \\(\\neg P\\).</li><li>De \\(P\\to Q\\) y \\(Q\\) se obtiene \\(P\\).</li><li>De \\(P\\lor Q\\) y \\(\\neg P\\) se obtiene \\(Q\\).</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y IV",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "I es modus ponens, II modus tollens y IV silogismo disyuntivo; III es una falacia.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-02",
+    "difficulty": "experto",
+    "type": "statements",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Considere la noción de validez.<ol class=\"roman\"><li>Un argumento válido puede tener premisas falsas.</li><li>Un argumento válido no puede tener premisas verdaderas y conclusión falsa.</li><li>La validez depende únicamente de que la conclusión sea verdadera.</li><li>La validez puede analizarse mediante la forma lógica.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y IV",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "La verdad aislada de la conclusión no determina la validez.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-03",
+    "difficulty": "avanzado",
+    "type": "statements",
+    "topic": "Cuantificadores",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Seleccione las equivalencias correctas.<ol class=\"roman\"><li>\\(\\neg\\forall x\\,P(x)\\equiv\\exists x\\,\\neg P(x)\\).</li><li>\\(\\neg\\exists x\\,P(x)\\equiv\\forall x\\,\\neg P(x)\\).</li><li>\\(\\forall x\\exists y\\,P(x,y)\\equiv\\exists y\\forall x\\,P(x,y)\\) siempre.</li><li>El dominio de discurso influye en el valor de verdad.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y IV",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "El orden de cuantificadores no se puede intercambiar en general.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-04",
+    "difficulty": "experto",
+    "type": "statements",
+    "topic": "Cuantificadores",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Para \\(D=\\mathbb{Z}\\), determine cuáles afirmaciones son verdaderas.<ol class=\"roman\"><li>\\(\\forall n\\in D,\\ \\exists m\\in D:\\ m=n+1\\).</li><li>\\(\\exists m\\in D,\\ \\forall n\\in D:\\ m=n+1\\).</li><li>\\(\\forall n\\in D,\\ n^2\\ge0\\).</li><li>\\(\\exists n\\in D,\\ n^2=-1\\).</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I y III",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "No existe un entero único que sea \\(n+1\\) para todos los \\(n\\), ni un entero cuyo cuadrado sea \\(-1\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-05",
+    "difficulty": "avanzado",
+    "type": "statements",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Sobre demostración directa y contraejemplos:<ol class=\"roman\"><li>Una prueba directa de \\(P\\to Q\\) comienza suponiendo \\(P\\).</li><li>Una afirmación universal falsa puede refutarse con un contraejemplo.</li><li>Para probar una afirmación existencial siempre se necesita contradicción.</li><li>Usar definiciones suele ser central en las pruebas directas.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y IV",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "III es falsa: una existencia puede probarse exhibiendo un ejemplo.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-06",
+    "difficulty": "experto",
+    "type": "statements",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Si \\(a\\mid b\\) y \\(a\\mid c\\), ¿qué pasos son pertinentes para demostrar directamente \\(a\\mid (bm+cn)\\)?<ol class=\"roman\"><li>Escribir \\(b=ak\\) y \\(c=a\\ell\\).</li><li>Calcular \\(bm+cn=a(km+\\ell n)\\).</li><li>Concluir que \\(km+\\ell n\\in\\mathbb{Z}\\).</li><li>Suponer que \\(a\\nmid(bm+cn)\\) desde el inicio.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y III",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Los tres primeros pasos forman una prueba directa; IV corresponde a otro enfoque.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-07",
+    "difficulty": "avanzado",
+    "type": "statements",
+    "topic": "Contraposición y contradicción",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Sobre la contraposición de \\(P\\to Q\\):<ol class=\"roman\"><li>Es \\(\\neg Q\\to\\neg P\\).</li><li>Es equivalente al condicional original.</li><li>Es lo mismo que la recíproca \\(Q\\to P\\).</li><li>Puede facilitar una prueba cuando \\(\\neg Q\\) tiene una estructura útil.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y IV",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "La recíproca no es equivalente en general.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-08",
+    "difficulty": "experto",
+    "type": "statements",
+    "topic": "Contraposición y contradicción",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "En una prueba clásica de irracionalidad de \\(\\sqrt{2}\\):<ol class=\"roman\"><li>Se supone que \\(\\sqrt{2}=\\frac ab\\) en términos mínimos.</li><li>Se deduce que \\(a\\) es par.</li><li>Se deduce que \\(b\\) es par.</li><li>Esto contradice que \\(a,b\\) fueran coprimos.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II, III y IV",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Ese es el esquema completo del argumento por contradicción.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-09",
+    "difficulty": "avanzado",
+    "type": "statements",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "En una prueba por casos:<ol class=\"roman\"><li>Los casos deben cubrir todas las posibilidades.</li><li>Los casos pueden solaparse siempre que el argumento siga siendo correcto.</li><li>Basta probar uno de los casos más representativos.</li><li>Par/impar es una partición natural de los enteros.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y IV",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "La exhaustividad es necesaria; el solapamiento no invalida por sí mismo el método.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-10",
+    "difficulty": "experto",
+    "type": "statements",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Para probar \\(P\\iff Q\\):<ol class=\"roman\"><li>Se prueba \\(P\\to Q\\).</li><li>Se prueba \\(Q\\to P\\).</li><li>También puede probarse una cadena de equivalencias válidas.</li><li>Basta verificar un ejemplo donde \\(P\\) y \\(Q\\) sean verdaderas.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y III",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Un ejemplo no demuestra una equivalencia universal.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-11",
+    "difficulty": "avanzado",
+    "type": "statements",
+    "topic": "Teoremas notables",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Sobre el teorema “si \\(n\\) es impar, entonces \\(n^2\\) es impar”:<ol class=\"roman\"><li>Puede demostrarse directamente escribiendo \\(n=2k+1\\).</li><li>\\((2k+1)^2=2(2k^2+2k)+1\\).</li><li>La forma final exhibe \\(n^2\\) como impar.</li><li>Se necesita inducción matemática.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y III",
+    "hint": "Reconoce primero la forma lógica del resultado y luego elige una estrategia adecuada: directa, contraposición, contradicción, casos o doble implicación.",
+    "solution": "No se requiere inducción.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "S-12",
+    "difficulty": "experto",
+    "type": "statements",
+    "topic": "Teoremas notables",
+    "title": "Afirmaciones I, II, III y IV",
+    "prompt": "Sobre el producto de un racional no nulo y un irracional:<ol class=\"roman\"><li>El resultado puede probarse por contradicción.</li><li>Si \\(r\\ne0\\) es racional y \\(rx\\) fuera racional, entonces \\(x=(rx)/r\\) sería racional.</li><li>La hipótesis \\(r\\ne0\\) es relevante.</li><li>El producto siempre es cero.</li></ol>",
+    "options": [
+      "Solo I",
+      "Solo II",
+      "Solo III",
+      "Solo IV",
+      "I y II",
+      "I y III",
+      "I y IV",
+      "II y III",
+      "II y IV",
+      "III y IV",
+      "I, II y III",
+      "I, II y IV",
+      "I, III y IV",
+      "II, III y IV",
+      "I, II, III y IV"
+    ],
+    "answer": "I, II y III",
+    "hint": "Reconoce primero la forma lógica del resultado y luego elige una estrategia adecuada: directa, contraposición, contradicción, casos o doble implicación.",
+    "solution": "La no nulidad permite dividir por \\(r\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-01",
+    "difficulty": "medio",
+    "type": "association",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Asocie cada esquema con su nombre:<br/>\n<b>A.</b> \\(P\\to Q,\\ P\\therefore Q\\)<br/>\n<b>B.</b> \\(P\\to Q,\\ \\neg Q\\therefore\\neg P\\)<br/>\n<b>C.</b> \\(P\\lor Q,\\ \\neg P\\therefore Q\\)<br/>\n<b>D.</b> \\(P\\to Q,\\ Q\\to R\\therefore P\\to R\\)",
+    "options": [],
+    "answer": "A–modus ponens; B–modus tollens; C–silogismo disyuntivo; D–silogismo hipotético",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Cada forma corresponde a una regla estándar de inferencia.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-02",
+    "difficulty": "avanzado",
+    "type": "association",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Clasifique como <em>válido</em> o <em>inválido</em>:\n <br/>A. \\(P\\to Q,\\ P\\therefore Q\\)\n <br/>B. \\(P\\to Q,\\ Q\\therefore P\\)\n <br/>C. \\(P\\to Q,\\ \\neg Q\\therefore\\neg P\\)\n <br/>D. \\(P\\to Q,\\ \\neg P\\therefore\\neg Q\\)",
+    "options": [],
+    "answer": "A válido; B inválido; C válido; D inválido",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "B afirma el consecuente y D niega el antecedente.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-03",
+    "difficulty": "experto",
+    "type": "association",
+    "topic": "Cuantificadores",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Asocie:\n <br/>A. “Todos los enteros son ...”\n <br/>B. “Existe un entero ...”\n <br/>C. “No todos los enteros ...”\n <br/>D. “No existe ningún entero ...”",
+    "options": [],
+    "answer": "A–\\(\\forall\\); B–\\(\\exists\\); C–\\(\\exists\\) con predicado negado; D–\\(\\forall\\) con predicado negado",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Se aplican las leyes de negación de cuantificadores.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-04",
+    "difficulty": "medio",
+    "type": "association",
+    "topic": "Cuantificadores",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Ordene los pasos para negar correctamente \\(\\forall x\\in D\\,P(x)\\):\n <br/>A. Negar el predicado.\n <br/>B. Identificar el cuantificador exterior.\n <br/>C. Cambiar \\(\\forall\\) por \\(\\exists\\).\n <br/>D. Escribir \\(\\exists x\\in D\\,\\neg P(x)\\).",
+    "options": [],
+    "answer": "B → C → A → D",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "Primero se identifica la estructura, luego se cambia el cuantificador y se niega el predicado.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-05",
+    "difficulty": "avanzado",
+    "type": "association",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Clasifique cada tarea según la estrategia más inmediata:\n <br/>A. Probar que la suma de dos pares es par.\n <br/>B. Refutar “todo primo es impar”.\n <br/>C. Probar que si \\(a\\mid b\\) y \\(a\\mid c\\), entonces \\(a\\mid(b+c)\\).\n <br/>D. Refutar “\\(x^2\\gt x\\) para todo real \\(x\\)”.",
+    "options": [],
+    "answer": "A directa; B contraejemplo; C directa; D contraejemplo",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Las afirmaciones universales falsas se refutan con ejemplos concretos.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-06",
+    "difficulty": "experto",
+    "type": "association",
+    "topic": "Contraposición y contradicción",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Asocie:\n <br/>A. Suponer \\(\\neg Q\\) y deducir \\(\\neg P\\).\n <br/>B. Suponer la negación del objetivo y obtener \\(R\\land\\neg R\\).\n <br/>C. Suponer \\(P\\) y deducir \\(Q\\).",
+    "options": [],
+    "answer": "A contraposición; B contradicción; C directa",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Son tres estructuras de prueba diferentes.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-07",
+    "difficulty": "medio",
+    "type": "association",
+    "topic": "Contraposición y contradicción",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Ordene el esquema clásico para probar que \\(\\sqrt{2}\\) es irracional:\n <br/>A. Deducir que numerador y denominador son pares.\n <br/>B. Suponer \\(\\sqrt{2}=a/b\\) en términos mínimos.\n <br/>C. Llegar a contradicción con la coprimalidad.\n <br/>D. Usar \\(a^2=2b^2\\).",
+    "options": [],
+    "answer": "B → D → A → C",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Ese es el flujo estándar de la prueba.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-08",
+    "difficulty": "avanzado",
+    "type": "association",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Asocie cada expresión con su formalización:\n <br/>A. “\\(P\\) es suficiente para \\(Q\\)”.\n <br/>B. “\\(P\\) es necesario para \\(Q\\)”.\n <br/>C. “\\(P\\) es necesario y suficiente para \\(Q\\)”.",
+    "options": [],
+    "answer": "A–\\(P\\to Q\\); B–\\(Q\\to P\\); C–\\(P\\iff Q\\)",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "La dirección de la implicación cambia entre condición suficiente y necesaria.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-09",
+    "difficulty": "experto",
+    "type": "association",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Ordene una prueba estándar de \\(P\\iff Q\\):\n <br/>A. Concluir \\(P\\iff Q\\).\n <br/>B. Probar \\(P\\to Q\\).\n <br/>C. Anunciar que se demostrarán ambas direcciones.\n <br/>D. Probar \\(Q\\to P\\).",
+    "options": [],
+    "answer": "C → B → D → A",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Primero se estructura la prueba, luego se prueban ambas implicaciones.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "CO-10",
+    "difficulty": "medio",
+    "type": "association",
+    "topic": "Teoremas notables",
+    "title": "Clasificación, ordenamiento o asociación",
+    "prompt": "Clasifique el resultado según una estrategia natural:\n <br/>A. \\(n\\) impar \\(\\Rightarrow n^2\\) impar.\n <br/>B. \\(\\sqrt{2}\\) irracional.\n <br/>C. \\(n^2\\) par \\(\\Rightarrow n\\) par.\n <br/>D. \\(|x|=x\\) si \\(x\\ge0\\) y \\(|x|=-x\\) si \\(x\\lt 0\\).",
+    "options": [],
+    "answer": "A directa; B contradicción; C contraposición; D casos",
+    "hint": "Reconoce primero la forma lógica del resultado y luego elige una estrategia adecuada: directa, contraposición, contradicción, casos o doble implicación.",
+    "solution": "Cada resultado exhibe una estructura típica del método indicado.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-01",
+    "difficulty": "medio",
+    "type": "visual",
+    "topic": "Cuantificadores",
+    "title": "Reto visual de lógica",
+    "prompt": "En el diagrama, \\(A\\) representa los estudiantes que dominan reglas de inferencia y \\(B\\) quienes dominan cuantificadores.\n    ¿Qué región representa “estudiantes que dominan ambos temas”?<div class=\"visual\">\n<svg aria-label=\"Diagrama de conjuntos A y B\" role=\"img\" viewBox=\"0 0 500 240\">\n<rect class=\"svg-bg\" height=\"224\" rx=\"16\" width=\"484\" x=\"8\" y=\"8\"></rect>\n<circle class=\"svg-set\" cx=\"210\" cy=\"120\" r=\"78\"></circle>\n<circle class=\"svg-set\" cx=\"290\" cy=\"120\" r=\"78\"></circle>\n<text class=\"svg-label\" x=\"155\" y=\"60\">A</text>\n<text class=\"svg-label\" x=\"335\" y=\"60\">B</text>\n<text class=\"svg-label\" x=\"20\" y=\"30\">U</text>\n</svg>\n</div>",
+    "options": [
+      "Solo la parte de \\(A\\) fuera de \\(B\\)",
+      "La intersección \\(A\\cap B\\)",
+      "El exterior de \\(A\\cup B\\)",
+      "Todo \\(U\\)"
+    ],
+    "answer": "La intersección \\(A\\cap B\\)",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "“Ambos” corresponde a intersección.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-02",
+    "difficulty": "avanzado",
+    "type": "visual",
+    "topic": "Argumentos válidos y reglas de inferencia",
+    "title": "Reto visual de lógica",
+    "prompt": "Observe la cadena lógica. ¿Qué conclusión global se deduce?<div class=\"visual\">\n<svg aria-label=\"Cadena de inferencia\" role=\"img\" viewBox=\"0 0 620 210\">\n<rect class=\"svg-box\" height=\"70\" rx=\"16\" width=\"150\" x=\"20\" y=\"70\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"16\" width=\"150\" x=\"235\" y=\"70\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"16\" width=\"150\" x=\"450\" y=\"70\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"95\" y=\"112\">P</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"310\" y=\"112\">Q</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"525\" y=\"112\">R</text>\n<line class=\"svg-arrow\" x1=\"170\" x2=\"235\" y1=\"105\" y2=\"105\"></line>\n<polygon class=\"svg-fill\" points=\"235,105 220,97 220,113\"></polygon>\n<line class=\"svg-arrow\" x1=\"385\" x2=\"450\" y1=\"105\" y2=\"105\"></line>\n<polygon class=\"svg-fill\" points=\"450,105 435,97 435,113\"></polygon>\n<text class=\"svg-small\" text-anchor=\"middle\" x=\"202\" y=\"92\">P→Q</text>\n<text class=\"svg-small\" text-anchor=\"middle\" x=\"418\" y=\"92\">Q→R</text>\n</svg>\n</div>",
+    "options": [
+      "\\(R\\to P\\)",
+      "\\(P\\to R\\)",
+      "\\(Q\\to P\\)",
+      "\\(P\\leftrightarrow R\\)"
+    ],
+    "answer": "\\(P\\to R\\)",
+    "hint": "Identifica las premisas y la conclusión. Busca una regla válida como modus ponens, modus tollens, silogismo hipotético o silogismo disyuntivo; evita afirmar el consecuente o negar el antecedente.",
+    "solution": "Es un silogismo hipotético.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-03",
+    "difficulty": "experto",
+    "type": "visual",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Reto visual de lógica",
+    "prompt": "El diagrama divide \\(n\\in\\mathbb{Z}\\) en dos ramas. ¿Por qué esta división sirve para una prueba por casos?<div class=\"visual\">\n<svg aria-label=\"Árbol de casos par e impar\" role=\"img\" viewBox=\"0 0 620 250\">\n<rect class=\"svg-box\" height=\"55\" rx=\"14\" width=\"130\" x=\"245\" y=\"18\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"310\" y=\"52\">n∈ℤ</text>\n<line class=\"svg-arrow\" x1=\"310\" x2=\"180\" y1=\"73\" y2=\"130\"></line>\n<line class=\"svg-arrow\" x1=\"310\" x2=\"440\" y1=\"73\" y2=\"130\"></line>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"150\" x=\"105\" y=\"130\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"150\" x=\"365\" y=\"130\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"180\" y=\"170\">n par</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"440\" y=\"170\">n impar</text>\n</svg>\n</div>",
+    "options": [
+      "Porque los casos son exhaustivos y mutuamente excluyentes.",
+      "Porque todo entero es positivo.",
+      "Porque solo se necesita probar la rama par.",
+      "Porque las ramas son equivalentes."
+    ],
+    "answer": "Porque los casos son exhaustivos y mutuamente excluyentes.",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Todo entero es exactamente par o impar.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-04",
+    "difficulty": "medio",
+    "type": "visual",
+    "topic": "Cuantificadores",
+    "title": "Reto visual de lógica",
+    "prompt": "El diagrama representa \\(\\forall x\\in D\\,\\exists y\\in D\\,P(x,y)\\). ¿Cuál interpretación es correcta?<div class=\"visual\">\n<svg viewBox=\"0 0 700 230\">\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"200\" x=\"18\" y=\"25\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"200\" x=\"250\" y=\"25\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"200\" x=\"482\" y=\"25\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"118\" y=\"67\">∀x∈D</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"350\" y=\"67\">∃y∈D</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"582\" y=\"67\">P(x,y)</text>\n<line class=\"svg-arrow\" x1=\"218\" x2=\"250\" y1=\"60\" y2=\"60\"></line>\n<line class=\"svg-arrow\" x1=\"450\" x2=\"482\" y1=\"60\" y2=\"60\"></line>\n<text class=\"svg-note\" text-anchor=\"middle\" x=\"350\" y=\"150\">El y puede depender de x</text>\n</svg>\n</div>",
+    "options": [
+      "Existe un único \\(y\\) que funciona para todos los \\(x\\).",
+      "Para cada \\(x\\), puede escogerse un \\(y\\) (posiblemente distinto) que haga verdadera \\(P(x,y)\\).",
+      "Para todo \\(y\\) existe un único \\(x\\).",
+      "No hay dependencia entre variables."
+    ],
+    "answer": "Para cada \\(x\\), puede escogerse un \\(y\\) (posiblemente distinto) que haga verdadera \\(P(x,y)\\).",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "El cuantificador existencial está dentro del universal.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-05",
+    "difficulty": "avanzado",
+    "type": "visual",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Reto visual de lógica",
+    "prompt": "La gráfica ilustra un punto \\(x=\\frac{1}{2}\\) donde \\(x^2\\lt x\\). ¿Qué permite concluir sobre \\[\\forall x\\in\\mathbb{R},\\qquad x^2\\gt x?\\] <div class=\"visual\"><svg viewBox=\"0 0 700 260\"><line x1=\"55\" y1=\"210\" x2=\"650\" y2=\"210\" class=\"axis\"></line><line x1=\"120\" y1=\"235\" x2=\"120\" y2=\"30\" class=\"axis\"></line><path d=\"M 70 180 Q 200 250 330 90 Q 460 -20 610 170\" class=\"curve\"></path><circle cx=\"240\" cy=\"205\" r=\"7\" class=\"point\"></circle><text x=\"253\" y=\"194\" class=\"svg-small\">x=1/2</text><text x=\"335\" y=\"235\" class=\"svg-small\">x</text><text x=\"93\" y=\"40\" class=\"svg-small\">y</text></svg></div>",
+    "options": [
+      "Es verdadera.",
+      "Es falsa.",
+      "Es una tautología.",
+      "No puede decidirse."
+    ],
+    "answer": "Es falsa.",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Un único contraejemplo refuta una afirmación universal.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-06",
+    "difficulty": "experto",
+    "type": "visual",
+    "topic": "Casos y demostraciones si y solo si",
+    "title": "Reto visual de lógica",
+    "prompt": "¿Qué proposición resume el diagrama?<div class=\"visual\">\n<svg viewBox=\"0 0 650 220\">\n<rect class=\"svg-box\" height=\"75\" rx=\"16\" width=\"180\" x=\"60\" y=\"75\"></rect>\n<rect class=\"svg-box\" height=\"75\" rx=\"16\" width=\"180\" x=\"410\" y=\"75\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"150\" y=\"120\">P</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"500\" y=\"120\">Q</text>\n<line class=\"svg-arrow\" x1=\"240\" x2=\"410\" y1=\"98\" y2=\"98\"></line>\n<polygon class=\"svg-fill\" points=\"410,98 395,90 395,106\"></polygon>\n<line class=\"svg-arrow\" x1=\"410\" x2=\"240\" y1=\"133\" y2=\"133\"></line>\n<polygon class=\"svg-fill\" points=\"240,133 255,125 255,141\"></polygon>\n<text class=\"svg-small\" text-anchor=\"middle\" x=\"325\" y=\"85\">P→Q</text>\n<text class=\"svg-small\" text-anchor=\"middle\" x=\"325\" y=\"158\">Q→P</text>\n</svg>\n</div>",
+    "options": [
+      "\\(P\\lor Q\\)",
+      "\\(P\\land Q\\)",
+      "\\(P\\iff Q\\)",
+      "\\(\\neg P\\to Q\\)"
+    ],
+    "answer": "\\(P\\iff Q\\)",
+    "hint": "Comprueba que los casos cubran todas las posibilidades. Para \\(P\\iff Q\\), demuestra por separado \\(P\\to Q\\) y \\(Q\\to P\\).",
+    "solution": "Las dos flechas representan ambas implicaciones.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-07",
+    "difficulty": "medio",
+    "type": "visual",
+    "topic": "Contraposición y contradicción",
+    "title": "Reto visual de lógica",
+    "prompt": "El diagrama comienza suponiendo \\(\\neg T\\) y termina en \\(R\\land\\neg R\\). ¿Qué método se está usando?<div class=\"visual\">\n<svg viewBox=\"0 0 720 260\">\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"155\" x=\"35\" y=\"85\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"155\" x=\"280\" y=\"85\"></rect>\n<rect class=\"svg-danger\" height=\"70\" rx=\"14\" width=\"155\" x=\"530\" y=\"85\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"112\" y=\"127\">¬T</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"357\" y=\"127\">Deducciones</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"607\" y=\"127\">R ∧ ¬R</text>\n<line class=\"svg-arrow\" x1=\"190\" x2=\"280\" y1=\"120\" y2=\"120\"></line>\n<line class=\"svg-arrow\" x1=\"435\" x2=\"530\" y1=\"120\" y2=\"120\"></line>\n</svg>\n</div>",
+    "options": [
+      "Prueba directa",
+      "Contradicción",
+      "Inducción",
+      "Contraejemplo"
+    ],
+    "answer": "Contradicción",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Se supone la negación de la tesis y se deriva una imposibilidad.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-08",
+    "difficulty": "avanzado",
+    "type": "visual",
+    "topic": "Cuantificadores",
+    "title": "Reto visual de lógica",
+    "prompt": "Si el universo \\(U\\) contiene objetos y los conjuntos representan quienes satisfacen \\(P(x)\\) y \\(Q(x)\\), ¿qué fórmula describe “existe un objeto que satisface ambas propiedades”?<div class=\"visual\">\n<svg viewBox=\"0 0 560 260\">\n<rect class=\"svg-bg\" height=\"240\" rx=\"16\" width=\"540\" x=\"10\" y=\"10\"></rect>\n<ellipse class=\"svg-set\" cx=\"225\" cy=\"130\" rx=\"145\" ry=\"88\"></ellipse>\n<ellipse class=\"svg-set\" cx=\"335\" cy=\"130\" rx=\"145\" ry=\"88\"></ellipse>\n<text class=\"svg-label\" x=\"140\" y=\"65\">P(x)</text>\n<text class=\"svg-label\" x=\"370\" y=\"65\">Q(x)</text>\n<text class=\"svg-note\" x=\"250\" y=\"135\">intersección</text>\n</svg>\n</div>",
+    "options": [
+      "\\(\\forall x(P(x)\\land Q(x))\\)",
+      "\\(\\exists x(P(x)\\land Q(x))\\)",
+      "\\(\\exists x(P(x)\\lor Q(x))\\)",
+      "\\(\\forall x(P(x)\\to Q(x))\\)"
+    ],
+    "answer": "\\(\\exists x(P(x)\\land Q(x))\\)",
+    "hint": "Fija primero el dominio. Lee los cuantificadores de izquierda a derecha y recuerda que al negar se intercambian \\(\\forall\\) y \\(\\exists\\) y se niega el predicado.",
+    "solution": "La existencia de un punto en la intersección se expresa con \\(\\exists\\) y \\(\\land\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-09",
+    "difficulty": "experto",
+    "type": "visual",
+    "topic": "Demostración directa y contraejemplos",
+    "title": "Reto visual de lógica",
+    "prompt": "¿Qué método de prueba representa mejor el flujo \\(P\\to\\text{definiciones/deducciones}\\to Q\\)?<div class=\"visual\">\n<svg viewBox=\"0 0 720 260\">\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"150\" x=\"40\" y=\"95\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"150\" x=\"285\" y=\"95\"></rect>\n<rect class=\"svg-box\" height=\"70\" rx=\"14\" width=\"150\" x=\"530\" y=\"95\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"115\" y=\"137\">P</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"360\" y=\"137\">Definiciones</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"605\" y=\"137\">Q</text>\n<line class=\"svg-arrow\" x1=\"190\" x2=\"285\" y1=\"130\" y2=\"130\"></line>\n<line class=\"svg-arrow\" x1=\"435\" x2=\"530\" y1=\"130\" y2=\"130\"></line>\n</svg>\n</div>",
+    "options": [
+      "Directa",
+      "Contradicción",
+      "Casos",
+      "Inducción"
+    ],
+    "answer": "Directa",
+    "hint": "Para una prueba directa, parte de la hipótesis y usa las definiciones. Para refutar una afirmación universal, busca un solo elemento del dominio que la haga falsa.",
+    "solution": "Se parte de la hipótesis y se llega a la conclusión mediante deducciones válidas.",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "IMG-10",
+    "difficulty": "medio",
+    "type": "visual",
+    "topic": "Contraposición y contradicción",
+    "title": "Reto visual de lógica",
+    "prompt": "La flecha inferior del diagrama corresponde a:<div class=\"visual\">\n<svg viewBox=\"0 0 700 260\">\n<rect class=\"svg-box\" height=\"62\" rx=\"14\" width=\"170\" x=\"50\" y=\"55\"></rect>\n<rect class=\"svg-box\" height=\"62\" rx=\"14\" width=\"170\" x=\"480\" y=\"55\"></rect>\n<rect class=\"svg-box\" height=\"62\" rx=\"14\" width=\"170\" x=\"50\" y=\"155\"></rect>\n<rect class=\"svg-box\" height=\"62\" rx=\"14\" width=\"170\" x=\"480\" y=\"155\"></rect>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"135\" y=\"92\">P</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"565\" y=\"92\">Q</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"135\" y=\"192\">¬P</text>\n<text class=\"svg-text\" text-anchor=\"middle\" x=\"565\" y=\"192\">¬Q</text>\n<line class=\"svg-arrow\" x1=\"220\" x2=\"480\" y1=\"86\" y2=\"86\"></line>\n<polygon class=\"svg-fill\" points=\"480,86 465,78 465,94\"></polygon>\n<line class=\"svg-arrow\" x1=\"480\" x2=\"220\" y1=\"186\" y2=\"186\"></line>\n<polygon class=\"svg-fill\" points=\"220,186 235,178 235,194\"></polygon>\n<text class=\"svg-small\" text-anchor=\"middle\" x=\"350\" y=\"72\">original</text>\n<text class=\"svg-small\" text-anchor=\"middle\" x=\"350\" y=\"173\">contrapositiva</text>\n</svg>\n</div>",
+    "options": [
+      "\\(\\neg P\\to\\neg Q\\)",
+      "\\(\\neg Q\\to\\neg P\\)",
+      "\\(Q\\to P\\)",
+      "\\(P\\to\\neg Q\\)"
+    ],
+    "answer": "\\(\\neg Q\\to\\neg P\\)",
+    "hint": "Distingue los métodos: la contrapositiva de \\(P\\to Q\\) es \\(\\neg Q\\to\\neg P\\); en contradicción se supone la negación de la tesis y se deriva una imposibilidad.",
+    "solution": "Esa es la contrapositiva de \\(P\to Q\\).",
+    "sourceBank": "Laberinto Griego"
+  },
+  {
+    "id": "TET-LOG-01",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Proposiciones y formalización",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes expresiones representa un enunciado afirmativo o proposición válida en lógica matemática?",
+    "options": [
+      "¡Ojalá mañana no llueva durante el examen!",
+      "\\(x^2 - 4 = 0\\)",
+      "El número 13 es un número primo y es impar.",
+      "¿Qué hora es en este momento?"
+    ],
+    "answer": "El número 13 es un número primo y es impar.",
+    "hint": "Recuerda que una proposición es una oración declarativa que tiene un único valor de verdad bien definido (verdadero o falso), sin ambigüedades ni variables libres no cuantificadas.",
+    "solution": "La opción C es una oración declarativa de la cual se puede afirmar con total certeza su valor de verdad (en este caso, es Verdadera). Las opciones A y D son exclamativas e interrogativas. La opción B contiene una variable libre (\\(x\\)), por lo que su valor de verdad depende del contexto y se clasifica como una función proposicional, no como una proposición.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-02",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Proposiciones y formalización",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Sean las proposiciones \\(p\\): \"Estudio para el parcial\" y \\(q\\): \"Apruebo Matemáticas Discretas\". ¿Cuál es la formalización correcta de la frase: \"No es cierto que estudie para el parcial y no apruebe Matemáticas Discretas\"?",
+    "options": [
+      "\\(\\neg p \\land \\neg q\\)",
+      "\\(\\neg(p \\land \\neg q)\\)",
+      "\\(p \\lor q\\)",
+      "\\(\\neg(p \\lor \\neg q)\\)"
+    ],
+    "answer": "\\(\\neg(p \\land \\neg q)\\)",
+    "hint": "Identifica el alcance de la negación principal \"No es cierto que...\" y cómo afecta a la conjunción interna.",
+    "solution": "La expresión \"No es cierto que\" introduce una negación global \\(\\neg(...)\\) sobre todo el bloque que le sigue. Dentro del bloque tenemos la conjunción \"estudie para el parcial\" (\\(p\\)) \"y\" (\\(\\land\\)) \"no apruebe\" (\\(\\neg q\\)). Al juntar todo de manera estructurada, obtenemos la fórmula sintácticamente correcta \\(\\neg(p \\land \\neg q)\\). En esta versión del banco se sustituyó una opción originalmente equivalente por De Morgan para garantizar una única respuesta correcta.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-03",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Proposiciones y formalización",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Si la proposición compuesta \\(p \\rightarrow q\\) es falsa, ¿cuáles son los valores de verdad respectivos de las proposiciones simples \\(p\\) y \\(q\\)?",
+    "options": [
+      "\\(p\\) es Verdadera, \\(q\\) es Verdadera.",
+      "\\(p\\) es Falsa, \\(q\\) es Verdadera.",
+      "\\(p\\) es Verdadera, \\(q\\) es Falsa.",
+      "\\(p\\) es Falsa, \\(q\\) es Falsa."
+    ],
+    "answer": "\\(p\\) es Verdadera, \\(q\\) es Falsa.",
+    "hint": "El condicional es un conector muy particular. Solo hay un escenario del mundo en el que una promesa o implicación lógica se rompe.",
+    "solution": "Por definición de la tabla de verdad del condicional (\\(\\rightarrow\\)), la implicación únicamente es falsa cuando el antecedente es verdadero y el consecuente es falso (\\(V \\rightarrow F \\equiv F\\)). En cualquier otro caso, el resultado es verdadero.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-04",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Proposiciones y formalización",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere la proposición compuesta dada por \\((p \\lor \\neg q) \\land q\\). Si sabemos que \\(q\\) es falsa, ¿cuál es el valor de verdad global de la expresión?",
+    "options": [
+      "Verdadero",
+      "Falso",
+      "Depende enteramente del valor de \\(p\\)",
+      "Indeterminado"
+    ],
+    "answer": "Falso",
+    "hint": "Analiza el conector principal de la expresión y cómo un valor falso en una de sus componentes puede simplificar todo el análisis.",
+    "solution": "El conector principal es una conjunción (\\(\\land\\)). Para que una conjunción sea verdadera, ambos lados deben ser verdaderos. Como se nos indica explícitamente que \\(q\\) es falsa, el segundo término de la conjunción es falso, lo que invalida inmediatamente toda la expresión, haciendo que sea falsa independientemente de lo que ocurra con el miembro izquierdo.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-05",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Proposiciones y formalización",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál es la traducción al lenguaje formal de la proposición: \"Lloverá mañana si y solo si la presión atmosférica baja o la humedad es alta\"? Sean: \\(p\\): \"Lloverá mañana\", \\(q\\): \"La presión atmosférica baja\", \\(r\\): \"La humedad es alta\".",
+    "options": [
+      "\\(p \\leftrightarrow (q \\land r)\\)",
+      "\\(p \\rightarrow (q \\lor r)\\)",
+      "\\(p \\leftrightarrow (q \\lor r)\\)",
+      "\\((p \\leftrightarrow q) \\lor r\\)"
+    ],
+    "answer": "\\(p \\leftrightarrow (q \\lor r)\\)",
+    "hint": "Identifica el conector principal que separa las dos ideas mayores de la oración y los signos de puntuación implícitos.",
+    "solution": "La frase \"si y solo si\" representa un bicondicional (\\(\\leftrightarrow\\)) que une a la proposición \\(p\\) con la estructura compuesta posterior. La estructura posterior utiliza el conector \"o\" (\\(\\lor\\)), agrupando las variables \\(q\\) y \\(r\\). Por ende, la agrupación correcta requiere paréntesis del lado derecho: \\(p \\leftrightarrow (q \\lor r)\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-06",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Conectores y tablas de verdad",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de los siguientes operadores lógicos no es asociativo, lo que significa que el orden de agrupación altera el significado o el resultado de la tabla de verdad?",
+    "options": [
+      "La Conjunción (\\(\\land\\))",
+      "La Disyunción (\\(\\lor\\))",
+      "El Condicional (\\(\\rightarrow\\))",
+      "La Doble Implicación (\\(\\leftrightarrow\\))"
+    ],
+    "answer": "El Condicional (\\(\\rightarrow\\))",
+    "hint": "Construye mentalmente o evalúa un contraejemplo rápido comparando \\((p \\rightarrow q) \\rightarrow r\\) con \\(p \\rightarrow (q \\rightarrow r)\\) asignando valores falsos a las variables.",
+    "solution": "Mientras que la conjunción, la disyunción y la doble implicación cumplen rigurosamente con la propiedad asociativa, el condicional no la cumple. Por ejemplo, si \\(p=F\\), \\(q=F\\) y \\(r=F\\): \\((F \\rightarrow F) \\rightarrow F \\equiv V \\rightarrow F \\equiv F\\). Por otro lado, \\(F \\rightarrow (F \\rightarrow F) \\equiv F \\rightarrow V \\equiv V\\). Al dar valores distintos, queda demostrado que no se pueden mover los paréntesis libremente.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-07",
+    "difficulty": "basico",
+    "type": "choice",
+    "topic": "Conectores y tablas de verdad",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Si una proposición compuesta está integrada por 4 variables proposicionales distintas (por ejemplo: \\(p, q, r, s\\)), ¿cuántas filas o combinaciones de valores tendrá su tabla de verdad completa?",
+    "options": [
+      "8 filas",
+      "12 filas",
+      "16 filas",
+      "64 filas"
+    ],
+    "answer": "16 filas",
+    "hint": "Cada variable proposicional independiente puede asumir exactamente dos valores de verdad (\\(V\\) o \\(F\\)). Aplica el principio fundamental del conteo multiplicativo.",
+    "solution": "El número de filas de una tabla de verdad para \\(n\\) variables proposicionales independientes se calcula mediante la fórmula exponencial \\(2^n\\). Para 4 variables, tenemos \\(2^4 = 2 \\times 2 \\times 2 \\times 2 = 16\\) combinaciones posibles de entrada.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-08",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Conectores y tablas de verdad",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Al construir la tabla de verdad de la expresión \\((\\neg p \\land q) \\rightarrow p\\), ¿cuál es la secuencia final de valores de verdad obtenidos en su columna principal (ordenados desde la combinación \\(p=V, q=V\\) hasta \\(p=F, q=F\\))?",
+    "options": [
+      "\\(V, V, F, V\\)",
+      "\\(V, V, V, V\\)",
+      "\\(F, F, V, F\\)",
+      "\\(V, V, F, F\\)"
+    ],
+    "answer": "\\(V, V, F, V\\)",
+    "hint": "Evalúa minuciosamente las cuatro combinaciones estándar paso por paso: \\((V,V), (V,F), (F,V), (F,F)\\).",
+    "solution": "Evaluemos cada fila de la tabla de verdad: 1. \\(p=V, q=V: (\\neg V \\land V) \\rightarrow V \\equiv (F \\land V) \\rightarrow V \\equiv F \\rightarrow V \\equiv V\\). 2. \\(p=V, q=F: (\\neg V \\land F) \\rightarrow V \\equiv (F \\land F) \\rightarrow V \\equiv F \\rightarrow V \\equiv V\\). 3. \\(p=F, q=V: (\\neg F \\land V) \\rightarrow F \\equiv (V \\land V) \\rightarrow F \\equiv V \\rightarrow F \\equiv F\\). 4. \\(p=F, q=F: (\\neg F \\land F) \\rightarrow F \\equiv (V \\land F) \\rightarrow F \\equiv F \\rightarrow F \\equiv V\\). La secuencia resultante en la columna del conector principal es \\(V, V, F, V\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-09",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Conectores y tablas de verdad",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Bajo qué única combinación de valores de verdad la proposición compuesta \\(\\neg(p \\lor q) \\leftrightarrow (\\neg p \\land \\neg q)\\) arroja un valor falso?",
+    "options": [
+      "Cuando \\(p\\) es verdadera y \\(q\\) es falsa.",
+      "Cuando ambas variables son falsas.",
+      "En ninguna combinación, ya que la expresión representa una equivalencia lógica fundamental.",
+      "Cuando ambas variables son verdaderas."
+    ],
+    "answer": "En ninguna combinación, ya que la expresión representa una equivalencia lógica fundamental.",
+    "hint": "Observa detalladamente la estructura de ambos lados del bicondicional. ¿Te recuerda a alguna ley de la lógica clásica de conjuntos o proposiciones?",
+    "solution": "La expresión expone de manera exacta una de las Leyes de De Morgan: \\(\\neg(p \\lor q) \\equiv \\neg p \\land \\neg q\\). Al ser ambos lados lógicamente equivalentes en todas sus combinaciones de verdad, el conector bicondicional (\\(\\leftrightarrow\\)) siempre recibirá valores idénticos en ambos extremos, dando como resultado un valor siempre verdadero (\\(V\\)). Jamás será falso.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-10",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Conectores y tablas de verdad",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere la columna final de una tabla de verdad para una proposición cualquiera. Si dicha columna presenta tres valores verdaderos (\\(V\\)) y un único valor falso (\\(F\\)), ¿cómo se clasifica formalmente esta proposición compuesta?",
+    "options": [
+      "Tautología",
+      "Contradicción",
+      "Contingencia",
+      "Equivalencia"
+    ],
+    "answer": "Contingencia",
+    "hint": "Repasa las definiciones cualitativas de los tres tipos básicos de resultados globales para las fórmulas de la lógica proposicional.",
+    "solution": "Una proposición se clasifica como contingencia si su valor de verdad depende de las variables componentes; es decir, si en su columna principal aparecen tanto valores verdaderos como falsos (sin importar la proporción de estos).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-11",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál es el valor de verdad de la proposición compuesta \\((p \\leftrightarrow \\neg q) \\lor (q \\rightarrow p)\\) cuando \\(p = F\\) y \\(q = V\\)?",
+    "options": [
+      "Verdadero (\\(V\\))",
+      "Falso (\\(F\\))",
+      "Indeterminado",
+      "No se puede evaluar con esos datos"
+    ],
+    "answer": "Verdadero (\\(V\\))",
+    "hint": "Reemplaza los valores directamente en cada subestructura y evalúa primero los conectores internos (paréntesis).",
+    "solution": "Sustituyendo los valores: Módulo izquierdo: \\(F \\leftrightarrow \\neg V \\equiv F \\leftrightarrow F \\equiv V\\). Módulo derecho: \\(V \\rightarrow F \\equiv F\\). Evaluando el conector principal (disyunción): \\(V \\lor F \\equiv V\\). Por lo tanto, la expresión global es Verdadera.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-12",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Al evaluar la tabla de verdad de la fórmula proposicional \\(\\neg(p \\rightarrow \\neg p)\\), descubrimos que el resultado es idéntico a la columna de una proposición simple conocida. ¿A cuál corresponde?",
+    "options": [
+      "A la columna de \\(\\neg p\\)",
+      "A la columna de \\(p\\)",
+      "A una columna llena de puros valores falsos",
+      "A una disyunción exclusiva"
+    ],
+    "answer": "A la columna de \\(p\\)",
+    "hint": "Desarrolla el condicional interno usando la equivalencia del condicional: \\(A \\rightarrow B \\equiv \\neg A \\lor B\\).",
+    "solution": "Evaluando el interior: \\(p \\rightarrow \\neg p \\equiv \\neg p \\lor \\neg p \\equiv \\neg p\\). Ahora aplicamos la negación exterior que afecta a todo el paréntesis: \\(\\neg(\\neg p) \\equiv p\\). Por doble negación, la columna resultante es exactamente igual a la de la variable original \\(p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-13",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes fórmulas proposicionales es lógicamente equivalente a la condicional clásica \\(p \\rightarrow q\\) utilizando únicamente negaciones y disyunciones?",
+    "options": [
+      "\\(\\neg p \\lor q\\)",
+      "\\(p \\lor \\neg q\\)",
+      "\\(\\neg p \\lor \\neg q\\)",
+      "\\(\\neg(p \\lor q)\\)"
+    ],
+    "answer": "\\(\\neg p \\lor q\\)",
+    "hint": "Piensa en cómo se niega una implicación o revisa la identidad de sustitución del condicional estándar.",
+    "solution": "La equivalencia lógica \\(p \\rightarrow q \\equiv \\neg p \\lor q\\) es una de las leyes fundamentales de implicación. Indica que afirmar que \"si ocurre \\(p\\), entonces ocurre \\(q\\)\" equivale a decir que \"no ocurre \\(p\\), o bien ocurre \\(q\\) (o ambas cosas)\".",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-14",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Por la Ley de la Contrapositiva (o contrarrecíproca), la expresión \\(p \\rightarrow q\\) puede ser reemplazada legítimamente por cuál de las siguientes opciones sin alterar su valor de verdad:",
+    "options": [
+      "\\(q \\rightarrow p\\)",
+      "\\(\\neg p \\rightarrow \\neg q\\)",
+      "\\(\\neg q \\rightarrow \\neg p\\)",
+      "\\(\\neg q \\rightarrow p\\)"
+    ],
+    "answer": "\\(\\neg q \\rightarrow \\neg p\\)",
+    "hint": "La contrapositiva requiere invertir el orden del antecedente y el consecuente, además de negar ambas partes individualmente.",
+    "solution": "La ley de la contraposición establece formalmente que \\(p \\rightarrow q \\equiv \\neg q \\rightarrow \\neg p\\). Esta propiedad es sumamente utilizada en demostraciones matemáticas formales (demostración por contraposición).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-15",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique la expresión proposicional siguiente utilizando las leyes lógicas conocidas: \\(\\neg(p \\land \\neg q) \\lor \\neg p\\).",
+    "options": [
+      "\\(q\\)",
+      "\\(\\neg p\\)",
+      "\\(\\neg p \\lor q\\)",
+      "\\(p \\land q\\)"
+    ],
+    "answer": "\\(\\neg p \\lor q\\)",
+    "hint": "Comience aplicando la Ley de De Morgan al primer término con paréntesis y luego aplique la ley de idempotencia o absorción si es necesario.",
+    "solution": "1. Aplicando De Morgan al primer bloque: \\(\\neg(p \\land \\neg q) \\equiv \\neg p \\lor \\neg(\\neg q) \\equiv \\neg p \\lor q\\). 2. Reincorporando el resto de la fórmula: \\((\\neg p \\lor q) \\lor \\neg p\\). 3. Por propiedad asociativa y conmutativa: \\((\\neg p \\lor \\neg p) \\lor q\\). 4. Por idempotencia (\\(\\neg p \\lor \\neg p \\equiv \\neg p\\)): \\(\\neg p \\lor q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-16",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Qué ley de la lógica proposicional justifica el paso intermedio que nos permite transformar la expresión \\(p \\land (q \\lor r)\\) en la expresión equivalente \\((p \\land q) \\lor (p \\land r)\\)?",
+    "options": [
+      "Ley Asociativa",
+      "Ley Distributiva",
+      "Ley Conmutativa",
+      "Ley de Absorción"
+    ],
+    "answer": "Ley Distributiva",
+    "hint": "Observa cómo el operador de conjunción externo se reparte o distribuye hacia cada uno de los elementos dentro del paréntesis disyuntivo.",
+    "solution": "La Ley Distributiva permite distribuir un conector respecto a otro. En este caso, la conjunción (\\(\\land\\)) se distribuye sobre la disyunción (\\(\\lor\\)), de forma análoga a la multiplicación respecto a la suma en el álgebra tradicional: \\(a \\cdot (b + c) = (a \\cdot b) + (a \\cdot c)\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-17",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "A qué forma mínima se reduce la proposición compuesta \\(p \\lor (p \\land q)\\) tras aplicar las leyes de simplificación lógica?",
+    "options": [
+      "\\(q\\)",
+      "\\(p \\lor q\\)",
+      "\\(p\\)",
+      "\\(\\neg p\\)"
+    ],
+    "answer": "\\(p\\)",
+    "hint": "Analiza qué ocurre con el valor total si la variable repetida \\(p\\) es verdadera, y qué ocurre si es falsa. Esta propiedad se conoce como Ley de Absorción.",
+    "solution": "Por la Ley de Absorción, cuando tenemos una variable afuera y la misma adentro combinando disyunción y conjunción de forma alterna (\\(p \\lor (p \\land q)\\)), el término secundario \\(q\\) queda completamente absorbido. Si \\(p=V\\), la disyunción es verdadera. Si \\(p=F\\), el paréntesis interno es falso y la disyunción queda falsa. El resultado copia fielmente a \\(p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-18",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Equivalencias y leyes lógicas",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes afirmaciones es lógicamente equivalente a la negación de la condicional, es decir, a la expresión \\(\\neg(p \\rightarrow q)\\)?",
+    "options": [
+      "\\(\\neg p \\rightarrow \\neg q\\)",
+      "\\(p \\land \\neg q\\)",
+      "\\(\\neg p \\lor q\\)",
+      "\\(p \\lor \\neg q\\)"
+    ],
+    "answer": "\\(p \\land \\neg q\\)",
+    "hint": "Primero cambia el condicional interno a su forma equivalente con disyunción, y luego aplica la Ley de De Morgan a la negación externa resultante.",
+    "solution": "Sabemos que \\(p \\rightarrow q \\equiv \\neg p \\lor q\\). Al introducir la negación externa, tenemos \\(\\neg(\\neg p \\lor q)\\). Aplicando las Leyes de De Morgan: \\(\\neg(\\neg p) \\land \\neg q \\equiv p \\land \\neg q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-19",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Tautologías y contradicciones",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Utilizando las leyes de la lógica, determine a qué es equivalente la expresión proposicional \\(p \\land (\\neg p \\lor q)\\).",
+    "options": [
+      "\\(p \\land q\\)",
+      "\\(p \\lor q\\)",
+      "Falso (\\(\\mathbf{F}\\))",
+      "\\(q\\)"
+    ],
+    "answer": "\\(p \\land q\\)",
+    "hint": "Aplique la ley distributiva para expandir la proposición y use el principio de contradicción (\\(p \\land \\neg p \\equiv \\mathbf{F}\\)).",
+    "solution": "Distribuyendo la conjunción: \\((p \\land \\neg p) \\lor (p \\land q)\\). Como \\(p \\land \\neg p\\) es una contradicción absoluta, equivale a Falso (\\(\\mathbf{F}\\)). La expresión se reduce a \\(\\mathbf{F} \\lor (p \\land q)\\). Cualquier expresión en disyunción con un elemento Falso simplemente da la misma expresión (elemento neutro), resultando en \\(p \\land q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-20",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Tautologías y contradicciones",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes opciones describe de manera correcta la Ley de la Doble Negación aplicada a una proposición cualquiera \\(p\\)?",
+    "options": [
+      "\\(\\neg(\\neg p) \\equiv \\neg p\\)",
+      "\\(\\neg(\\neg p) \\equiv p\\)",
+      "\\(\\neg(\\neg p) \\equiv \\mathbf{V}\\)",
+      "\\(p \\land \\neg p \\equiv p\\)"
+    ],
+    "answer": "\\(\\neg(\\neg p) \\equiv p\\)",
+    "hint": "Negar la negación de una afirmación equivale a regresar al estado original de la misma.",
+    "solution": "La ley de la doble negación determina que si negamos una proposición que ya se encontraba negada, estas operaciones lógicas se cancelan mutuamente, devolviendo la proposición original. Por tanto, \\(\\neg(\\neg p) \\equiv p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-21",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Tautologías y contradicciones",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes expresiones representa el ejemplo clásico más simple de una Tautología (siempre verdadera)?",
+    "options": [
+      "\\(p \\land \\neg p\\)",
+      "\\(p \\rightarrow \\neg p\\)",
+      "\\(p \\lor \\neg p\\)",
+      "\\(p \\leftrightarrow \\neg p\\)"
+    ],
+    "answer": "\\(p \\lor \\neg p\\)",
+    "hint": "Busca la expresión que afirma que un enunciado ocurre o no ocurre, no dejando espacio para terceras opciones (Principio del tercio excluso).",
+    "solution": "La fórmula \\(p \\lor \\neg p\\) representa la Ley del Tercio Excluso. Dado que \\(p\\) solo puede ser \\(V\\) o \\(F\\), su negación tomará el valor opuesto. Al estar conectadas por una disyunción (\\(\\lor\\)), basta con que uno de los dos lados sea verdadero para que toda la expresión sea verdadera en cualquier escenario.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-22",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Tautologías y contradicciones",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes expresiones representa una Contradicción lógica absoluta (siempre falsa)?",
+    "options": [
+      "\\(p \\lor \\mathbf{F}\\)",
+      "\\(\\neg(p \\lor \\neg p)\\)",
+      "\\(p \\rightarrow (p \\lor q)\\)",
+      "\\(\\neg(p \\land \\neg p)\\)"
+    ],
+    "answer": "\\(\\neg(p \\lor \\neg p)\\)",
+    "hint": "Identifica el valor interno de los paréntesis antes de evaluar la negación que se encuentra afuera.",
+    "solution": "Analizando el interior de la opción B: \\((p \\lor \\neg p)\\) es una tautología conocida (siempre verdadera). Al colocar una negación externa \\(\\neg(\\mathbf{V})\\), el resultado se transforma obligatoriamente en Falso (\\(\\mathbf{F}\\)) para todas las filas de la tabla de verdad, cumpliendo con la definición de contradicción. La opción D, por el contrario, es una tautología (\\(\\neg(\\mathbf{F}) \\equiv \\mathbf{V}\\)).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-23",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Tautologías y contradicciones",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Se define un enunciado compuesto como \"Lógicamente Válido\" o Tautológico cuando:",
+    "options": [
+      "Tiene al menos una combinación verdadera en su tabla de verdad.",
+      "Todas las interpretaciones de sus variables proposicionales dan como resultado el valor Falso.",
+      "Todas las interpretaciones de sus variables proposicionales dan como resultado el valor Verdadero.",
+      "Su valor de verdad depende de los enunciados del mundo real."
+    ],
+    "answer": "Todas las interpretaciones de sus variables proposicionales dan como resultado el valor Verdadero.",
+    "hint": "El prefijo \"Tauto\" proviene del griego y hace alusión a \"lo mismo\". En lógica significa que la forma estructural garantiza la verdad absoluta.",
+    "solution": "Una tautología es una fórmula bien formada que resulta verdadera bajo cualquier asignación de valores de verdad que se le otorgue a sus variables componentes.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-24",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Determine la naturaleza de la siguiente proposición compuesta analizando sus formas lógicas: \\((p \\land q) \\rightarrow p\\).",
+    "options": [
+      "Contradicción",
+      "Contingencia",
+      "Tautología",
+      "Equivalencia implícita"
+    ],
+    "answer": "Tautología",
+    "hint": "Piense si es posible que el antecedente \\((p \\land q)\\) sea verdadero y al mismo tiempo el consecuente \\(p\\) sea falso.",
+    "solution": "Para que el condicional sea falso, el antecedente \\((p \\land q)\\) tendría que ser Verdadero (lo cual obliga a que \\(p=V\\) y \\(q=V\\)) y el consecuente \\(p\\) tendría que ser Falso. Esto genera un conflicto insalvable (\\(p\\) no puede ser \\(V\\) y \\(F\\) a la vez). Al ser imposible obtener la combinación \\(V \\rightarrow F\\), la proposición es siempre Verdadera, clasificándose como Tautología.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-25",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cómo se clasifica la expresión proposicional \\((p \\lor q) \\leftrightarrow \\neg p\\)?",
+    "options": [
+      "Tautología",
+      "Contradicción",
+      "Contingencia",
+      "Paradoja"
+    ],
+    "answer": "Contingencia",
+    "hint": "Pruebe dos escenarios rápidos: 1) \\(p=V, q=V\\), 2) \\(p=F, q=F\\) y observe si los resultados finales difieren.",
+    "solution": "Evaluemos: Escenario 1 (\\(p=V, q=V\\)): \\((V \\lor V) \\leftrightarrow \\neg V \\equiv V \\leftrightarrow F \\equiv F\\). Escenario 2 (\\(p=F, q=F\\)): \\((F \\lor F) \\leftrightarrow \\neg F \\equiv F \\leftrightarrow V \\equiv F\\). Escenario 3 (\\(p=F, q=V\\)): \\((F \\lor V) \\leftrightarrow \\neg F \\equiv V \\leftrightarrow V \\equiv V\\). Como arroja tanto valores falsos como verdaderos según los datos de entrada, la fórmula es una Contingencia.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-26",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Si al operar una fórmula proposicional compleja \\(A\\) logramos demostrar que \\(A \\equiv \\mathbf{V}\\) (donde \\(\\mathbf{V}\\) es la constante para verdad), ¿qué se puede deducir inmediatamente sobre la negación de dicha fórmula, es decir, \\(\\neg A\\)?",
+    "options": [
+      "\\(\\neg A\\) es una Contingencia.",
+      "\\(\\neg A\\) es una Tautología.",
+      "\\(\\neg A\\) es una Contradicción.",
+      "\\(\\neg A\\) equivale a la variable \\(p\\)."
+    ],
+    "answer": "\\(\\neg A\\) es una Contradicción.",
+    "hint": "La negación lógica invierte el espectro de los valores obtenidos. Si el espectro original era puramente verdadero, piensa qué sucede al invertirlo completo.",
+    "solution": "Si una proposición \\(A\\) es una tautología (\\(A \\equiv \\mathbf{V}\\)), su negación \\(\\neg A\\) transformará todos esos valores verdaderos en falsos de forma unánime (\\(\\neg \\mathbf{V} \\equiv \\mathbf{F}\\)). Por definición, una proposición cuyos valores son todos falsos es una Contradicción.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-27",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál de las siguientes afirmaciones describe de forma precisa la relación de equivalencia lógica entre dos proposiciones cualesquiera \\(P\\) y \\(Q\\)?",
+    "options": [
+      "\\(P \\equiv Q\\) si y solo si la condicional \\(P \\rightarrow Q\\) es una contingencia.",
+      "\\(P \\equiv Q\\) si y solo si la bicondicional \\(P \\leftrightarrow Q\\) es una tautología.",
+      "\\(P \\equiv Q\\) si y solo si la conjunción \\(P \\land Q\\) es verdadera.",
+      "\\(P \\equiv Q\\) si y solo si ambas son proposiciones simples independientes."
+    ],
+    "answer": "\\(P \\equiv Q\\) si y solo si la bicondicional \\(P \\leftrightarrow Q\\) es una tautología.",
+    "hint": "La equivalencia lógica significa tener las mismas tablas de verdad. ¿Qué conector da verdadero cuando las dos subproposiciones tienen el mismo valor?",
+    "solution": "Dos proposiciones \\(P\\) y \\(Q\\) son equivalentes si y solo si poseen los mismos valores en sus tablas de verdad para cada fila. El operador bicondicional (\\(\\leftrightarrow\\)) da verdadero justamente cuando sus dos lados coinciden en valor; por ende, si coinciden siempre, el bicondicional será una Tautología.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-28",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Evalúe la expresión \\([(p \\rightarrow q) \\land p] \\rightarrow q\\) (conocida históricamente como la estructura del *Modus Ponens*). Esta expresión es una:",
+    "options": [
+      "Contingencia",
+      "Tautología",
+      "Contradicción",
+      "Falacia formal"
+    ],
+    "answer": "Tautología",
+    "hint": "Intente encontrar una asignación de variables que haga que este argumento lógico sea falso. Recuerde la regla del condicional principal.",
+    "solution": "Evaluando la estructura argumental básica: si el antecedente \\([(p \\rightarrow q) \\land p]\\) es verdadero, significa que tanto \\(p \\rightarrow q\\) como \\(p\\) son verdaderos a la vez. Si \\(p\\) es verdadero y \\(p \\rightarrow q\\) es verdadero, necesariamente \\(q\\) tiene que ser verdadero. Por lo tanto, el consecuente externo \\(q\\) será verdadero, llevando a la forma final \\(V \\rightarrow V \\equiv V\\). Al no existir forma de fallar, constituye una Tautología.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-29",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Qué resultado se obtiene al calcular la tabla de verdad de la expresión proposicional \\((p \\land \\neg q) \\land (\\neg p \\lor q)\\)?",
+    "options": [
+      "Una columna balanceada de dos \\(V\\) y dos \\(F\\).",
+      "Una Tautología.",
+      "Una Contradicción.",
+      "La misma columna de la variable \\(q\\)."
+    ],
+    "answer": "Una Contradicción.",
+    "hint": "Aplique la Ley de De Morgan a la primera parte de la conjunción de una forma inversa o note que el segundo bloque es exactamente la negación del primer bloque.",
+    "solution": "Observemos con cuidado: si aplicamos De Morgan a la expresión del segundo paréntesis \\(\\neg p \\lor q\\), descubrimos que equivale a \\(\\neg(p \\land \\neg q)\\). Sustituyendo esto en la fórmula original, obtenemos la estructura simplificada: \\((p \\land \\neg q) \\land \\neg(p \\land \\neg q)\\). Si llamamos \\(X = (p \\land \\neg q)\\), la fórmula tiene la forma elemental \\(X \\land \\neg X\\), la cual es una contradicción conocida.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-30",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Validez lógica y argumentación",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere la proposición compuesta \\((\\neg p \\rightarrow \\mathbf{F}) \\leftrightarrow p\\). Tras realizar su análisis lógico mediante tablas de verdad o simplificación conceptual, se determina que es una:",
+    "options": [
+      "Tautología",
+      "Contradicción",
+      "Contingencia",
+      "Equivalencia nula"
+    ],
+    "answer": "Tautología",
+    "hint": "Recuerde que un condicional con consecuente falso (\\(\\mathbf{F}\\)) reduce su valor de verdad a la negación de su propio antecedente.",
+    "solution": "Evaluemos el término de la izquierda: \\(\\neg p \\rightarrow \\mathbf{F}\\). Usando la equivalencia del condicional: \\(\\neg(\\neg p) \\lor \\mathbf{F} \\equiv p \\lor \\mathbf{F}\\). Como el Falso es el elemento neutro de la disyunción, \\(p \\lor \\mathbf{F}\\) se simplifica simplemente como \\(p\\). Al sustituir de vuelta en la estructura original, nos queda \\(p \\leftrightarrow p\\). Cualquier variable en doble implicación consigo misma da siempre Verdadero, por lo tanto, es una Tautología.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-31",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique \\(p \\land (p \\lor q)\\).",
+    "options": [
+      "\\(p\\)",
+      "\\(q\\)",
+      "\\(p \\lor q\\)",
+      "\\(p \\land q\\)"
+    ],
+    "answer": "\\(p\\)",
+    "hint": "Reconoce la forma dual de la ley de absorción.",
+    "solution": "Por absorción, \\(p \\land (p \\lor q) \\equiv p\\). Si \\(p\\) es falsa, toda la conjunción es falsa; si \\(p\\) es verdadera, el paréntesis es verdadero.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-32",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿A qué forma mínima equivale \\((p \\lor q) \\land (p \\lor \\neg q)\\)?",
+    "options": [
+      "\\(p\\)",
+      "\\(q\\)",
+      "\\(p \\lor q\\)",
+      "\\(p \\land q\\)"
+    ],
+    "answer": "\\(p\\)",
+    "hint": "Use distributividad: \\((a\\lor b)\\land(a\\lor c)\\equiv a\\lor(b\\land c)\\).",
+    "solution": "\\((p\\lor q)\\land(p\\lor\\neg q)\\equiv p\\lor(q\\land\\neg q)\\equiv p\\lor\\mathbf{F}\\equiv p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-33",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique \\((p \\land q) \\lor (p \\land \\neg q)\\).",
+    "options": [
+      "\\(p\\)",
+      "\\(q\\)",
+      "\\(p \\lor q\\)",
+      "\\(\\mathbf{F}\\)"
+    ],
+    "answer": "\\(p\\)",
+    "hint": "Factorice la proposición común antes de simplificar.",
+    "solution": "Factorizando \\(p\\): \\((p\\land q)\\lor(p\\land\\neg q)\\equiv p\\land(q\\lor\\neg q)\\equiv p\\land\\mathbf{V}\\equiv p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-34",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál fórmula es equivalente a \\((p\\rightarrow q)\\land(p\\rightarrow r)\\)?",
+    "options": [
+      "\\(p\\rightarrow(q\\land r)\\)",
+      "\\(p\\rightarrow(q\\lor r)\\)",
+      "\\((q\\land r)\\rightarrow p\\)",
+      "\\((p\\land q)\\rightarrow r\\)"
+    ],
+    "answer": "\\(p\\rightarrow(q\\land r)\\)",
+    "hint": "Reemplace ambos condicionales por disyunciones con \\(\\neg p\\).",
+    "solution": "\\((\\neg p\\lor q)\\land(\\neg p\\lor r)\\equiv \\neg p\\lor(q\\land r)\\equiv p\\rightarrow(q\\land r)\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-35",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál fórmula es equivalente a \\((p\\rightarrow r)\\land(q\\rightarrow r)\\)?",
+    "options": [
+      "\\((p\\lor q)\\rightarrow r\\)",
+      "\\((p\\land q)\\rightarrow r\\)",
+      "\\(r\\rightarrow(p\\lor q)\\)",
+      "\\(p\\rightarrow(q\\land r)\\)"
+    ],
+    "answer": "\\((p\\lor q)\\rightarrow r\\)",
+    "hint": "Observe que ambas premisas deben conducir al mismo consecuente.",
+    "solution": "\\((\\neg p\\lor r)\\land(\\neg q\\lor r)\\equiv(\\neg p\\land\\neg q)\\lor r\\equiv\\neg(p\\lor q)\\lor r\\equiv(p\\lor q)\\rightarrow r\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-36",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique estructuralmente \\(p\\rightarrow(q\\rightarrow r)\\).",
+    "options": [
+      "\\((p\\land q)\\rightarrow r\\)",
+      "\\((p\\lor q)\\rightarrow r\\)",
+      "\\(p\\rightarrow(q\\land r)\\)",
+      "\\(q\\rightarrow(p\\land r)\\)"
+    ],
+    "answer": "\\((p\\land q)\\rightarrow r\\)",
+    "hint": "Elimine primero el condicional interno y luego el externo.",
+    "solution": "\\(p\\rightarrow(q\\rightarrow r)\\equiv\\neg p\\lor(\\neg q\\lor r)\\equiv\\neg(p\\land q)\\lor r\\equiv(p\\land q)\\rightarrow r\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-37",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál expresión es equivalente a \\(\\neg(p\\leftrightarrow q)\\)?",
+    "options": [
+      "\\((p\\land\\neg q)\\lor(\\neg p\\land q)\\)",
+      "\\((p\\land q)\\lor(\\neg p\\land\\neg q)\\)",
+      "\\(p\\lor q\\)",
+      "\\(p\\land q\\)"
+    ],
+    "answer": "\\((p\\land\\neg q)\\lor(\\neg p\\land q)\\)",
+    "hint": "La negación del bicondicional es verdadera cuando los valores son diferentes.",
+    "solution": "\\(\\neg(p\\leftrightarrow q)\\) representa la disyunción exclusiva: exactamente una de las proposiciones es verdadera.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-38",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál es una forma equivalente de \\(p\\leftrightarrow q\\) usando solo \\(\\land,\\lor,\\neg\\)?",
+    "options": [
+      "\\((p\\land q)\\lor(\\neg p\\land\\neg q)\\)",
+      "\\((p\\land\\neg q)\\lor(\\neg p\\land q)\\)",
+      "\\(p\\lor q\\)",
+      "\\(\\neg p\\lor q\\)"
+    ],
+    "answer": "\\((p\\land q)\\lor(\\neg p\\land\\neg q)\\)",
+    "hint": "El bicondicional es verdadero cuando ambas proposiciones coinciden.",
+    "solution": "Las coincidencias son \\(p=q=V\\) y \\(p=q=F\\), por lo que \\(p\\leftrightarrow q\\equiv(p\\land q)\\lor(\\neg p\\land\\neg q)\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-39",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique \\(\\neg p\\rightarrow q\\).",
+    "options": [
+      "\\(p\\lor q\\)",
+      "\\(\\neg p\\lor q\\)",
+      "\\(p\\land q\\)",
+      "\\(\\neg p\\land q\\)"
+    ],
+    "answer": "\\(p\\lor q\\)",
+    "hint": "Use \\(a\\rightarrow b\\equiv\\neg a\\lor b\\) con \\(a=\\neg p\\).",
+    "solution": "\\(\\neg p\\rightarrow q\\equiv\\neg(\\neg p)\\lor q\\equiv p\\lor q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-40",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál proposición es equivalente a \\((p\\land q)\\rightarrow r\\)?",
+    "options": [
+      "\\(p\\rightarrow(q\\rightarrow r)\\)",
+      "\\((p\\rightarrow q)\\land(q\\rightarrow r)\\)",
+      "\\((p\\lor q)\\rightarrow r\\)",
+      "\\(p\\rightarrow(q\\land r)\\)"
+    ],
+    "answer": "\\(p\\rightarrow(q\\rightarrow r)\\)",
+    "hint": "Transforme el condicional en \\(\\neg(p\\land q)\\lor r\\).",
+    "solution": "\\((p\\land q)\\rightarrow r\\equiv\\neg p\\lor\\neg q\\lor r\\equiv p\\rightarrow(\\neg q\\lor r)\\equiv p\\rightarrow(q\\rightarrow r)\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-41",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique \\(\\neg(p\\lor q)\\lor(p\\land q)\\).",
+    "options": [
+      "\\(p\\leftrightarrow q\\)",
+      "\\(\\neg(p\\leftrightarrow q)\\)",
+      "\\(p\\lor q\\)",
+      "\\(p\\land q\\)"
+    ],
+    "answer": "\\(p\\leftrightarrow q\\)",
+    "hint": "La expresión es verdadera cuando ambas son falsas o ambas son verdaderas.",
+    "solution": "Por De Morgan, \\(\\neg(p\\lor q)\\equiv\\neg p\\land\\neg q\\). Entonces se obtiene \\((\\neg p\\land\\neg q)\\lor(p\\land q)\\), que es el bicondicional.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-42",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿A qué equivale \\([(p\\rightarrow q)\\land p]\\lor\\neg q\\)?",
+    "options": [
+      "\\(p\\lor\\neg q\\)",
+      "\\(p\\rightarrow q\\)",
+      "\\(p\\land q\\)",
+      "\\(\\neg p\\lor q\\)"
+    ],
+    "answer": "\\(p\\lor\\neg q\\)",
+    "hint": "Primero simplifique el bloque del modus ponens como una conjunción.",
+    "solution": "\\((p\\rightarrow q)\\land p\\equiv(\\neg p\\lor q)\\land p\\equiv p\\land q\\). Luego \\((p\\land q)\\lor\\neg q\\equiv(p\\lor\\neg q)\\land(q\\lor\\neg q)\\equiv p\\lor\\neg q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-43",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Simplifique \\((p\\lor q)\\land(\\neg p\\lor q)\\).",
+    "options": [
+      "\\(q\\)",
+      "\\(p\\)",
+      "\\(p\\lor q\\)",
+      "\\(p\\land q\\)"
+    ],
+    "answer": "\\(q\\)",
+    "hint": "Use la distributividad con el término común \\(q\\).",
+    "solution": "\\((p\\lor q)\\land(\\neg p\\lor q)\\equiv(p\\land\\neg p)\\lor q\\equiv\\mathbf{F}\\lor q\\equiv q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-44",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "¿Cuál fórmula equivale a \\((p\\rightarrow q)\\lor(p\\rightarrow r)\\)?",
+    "options": [
+      "\\(p\\rightarrow(q\\lor r)\\)",
+      "\\(p\\rightarrow(q\\land r)\\)",
+      "\\((p\\land q)\\rightarrow r\\)",
+      "\\((q\\lor r)\\rightarrow p\\)"
+    ],
+    "answer": "\\(p\\rightarrow(q\\lor r)\\)",
+    "hint": "Elimine los dos condicionales y agrupe las dos apariciones de \\(\\neg p\\).",
+    "solution": "\\((\\neg p\\lor q)\\lor(\\neg p\\lor r)\\equiv\\neg p\\lor(q\\lor r)\\equiv p\\rightarrow(q\\lor r)\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-45",
+    "difficulty": "medio",
+    "type": "choice",
+    "topic": "Álgebra proposicional",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Niege correctamente la proposición \\((p\\lor q)\\rightarrow r\\).",
+    "options": [
+      "\\((p\\lor q)\\land\\neg r\\)",
+      "\\(\\neg(p\\lor q)\\lor r\\)",
+      "\\(\\neg p\\land\\neg q\\land\\neg r\\)",
+      "\\((p\\land q)\\land\\neg r\\)"
+    ],
+    "answer": "\\((p\\lor q)\\land\\neg r\\)",
+    "hint": "La negación de \\(A\\rightarrow B\\) es \\(A\\land\\neg B\\).",
+    "solution": "\\(\\neg[(p\\lor q)\\rightarrow r]\\equiv\\neg[\\neg(p\\lor q)\\lor r]\\equiv(p\\lor q)\\land\\neg r\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-46",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=\\neg(p\\land q)\\) y \\(Q=\\neg p\\land\\neg q\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí, por la ley de De Morgan.",
+      "No. Con \\(p=V, q=F\\), \\(P=V\\) y \\(Q=F\\).",
+      "No, porque \\(P\\) siempre es falsa.",
+      "Sí, porque ambas contienen dos negaciones."
+    ],
+    "answer": "No. Con \\(p=V, q=F\\), \\(P=V\\) y \\(Q=F\\).",
+    "hint": "Una sola fila diferente basta para descartar la equivalencia.",
+    "solution": "La ley correcta de De Morgan es \\(\\neg(p\\land q)\\equiv\\neg p\\lor\\neg q\\), no una conjunción de negaciones.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-47",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\rightarrow q\\) y \\(Q=q\\rightarrow p\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí, por conmutatividad del condicional.",
+      "No. Con \\(p=F, q=V\\), \\(P=V\\) y \\(Q=F\\).",
+      "No, porque ambos condicionales son siempre falsos.",
+      "Sí, porque intercambiar antecedente y consecuente no cambia el valor."
+    ],
+    "answer": "No. Con \\(p=F, q=V\\), \\(P=V\\) y \\(Q=F\\).",
+    "hint": "El condicional no es conmutativo.",
+    "solution": "La recíproca \\(q\\rightarrow p\\) no es equivalente al condicional original. El contraejemplo indicado produce columnas diferentes.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-48",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\rightarrow q\\) y \\(Q=\\neg q\\rightarrow\\neg p\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Son equivalentes por la ley de contraposición.",
+      "No. Difieren cuando \\(p=V,q=F\\).",
+      "Sí, pero únicamente cuando \\(p=q\\).",
+      "No, porque una tiene negaciones y la otra no."
+    ],
+    "answer": "Sí. Son equivalentes por la ley de contraposición.",
+    "hint": "La contrarrecíproca invierte y niega ambas partes.",
+    "solution": "El condicional y su contrapositiva tienen exactamente la misma columna de verdad en las cuatro asignaciones.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-49",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=(p\\lor q)\\rightarrow r\\) y \\(Q=(p\\rightarrow r)\\land(q\\rightarrow r)\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Al eliminar condicionales, ambas se reducen a \\((\\neg p\\land\\neg q)\\lor r\\).",
+      "No. Difieren cuando \\(p=q=F,r=F\\).",
+      "Sí, pero solo cuando \\(r\\) es verdadera.",
+      "No, porque una usa disyunción y la otra conjunción."
+    ],
+    "answer": "Sí. Al eliminar condicionales, ambas se reducen a \\((\\neg p\\land\\neg q)\\lor r\\).",
+    "hint": "No compare solo los conectores visibles; simplifique ambas fórmulas.",
+    "solution": "La distribución del consecuente sobre una disyunción en el antecedente produce dos condicionales unidos por conjunción.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-50",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=(p\\land q)\\rightarrow r\\) y \\(Q=(p\\rightarrow r)\\land(q\\rightarrow r)\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí, por distribución del condicional.",
+      "No. Con \\(p=V,q=F,r=F\\), \\(P=V\\) y \\(Q=F\\).",
+      "No, porque \\(P\\) es una contradicción.",
+      "Sí, porque ambas obligan siempre a que \\(r\\) sea verdadera."
+    ],
+    "answer": "No. Con \\(p=V,q=F,r=F\\), \\(P=V\\) y \\(Q=F\\).",
+    "hint": "Pruebe un caso donde el antecedente conjuntivo sea falso, pero uno de los condicionales individuales falle.",
+    "solution": "Cuando \\(q\\) es falsa, \\((p\\land q)\\rightarrow r\\) resulta verdadera automáticamente; sin embargo, \\(p\\rightarrow r\\) puede ser falsa.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-51",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\leftrightarrow q\\) y \\(Q=(p\\rightarrow q)\\land(q\\rightarrow p)\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Esta es la definición del bicondicional mediante dos condicionales.",
+      "No. El bicondicional exige valores diferentes.",
+      "Sí, pero solo cuando \\(p\\) es verdadera.",
+      "No, porque la conjunción invalida la equivalencia."
+    ],
+    "answer": "Sí. Esta es la definición del bicondicional mediante dos condicionales.",
+    "hint": "El “si y solo si” exige las dos direcciones.",
+    "solution": "El bicondicional afirma simultáneamente \\(p\\rightarrow q\\) y \\(q\\rightarrow p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-52",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\lor(q\\land r)\\) y \\(Q=(p\\lor q)\\land(p\\lor r)\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Son equivalentes por la ley distributiva de \\(\\lor\\) sobre \\(\\land\\).",
+      "No. Difieren cuando \\(p=F,q=V,r=V\\).",
+      "Sí, pero solamente si \\(q=r\\).",
+      "No, porque la disyunción no es distributiva."
+    ],
+    "answer": "Sí. Son equivalentes por la ley distributiva de \\(\\lor\\) sobre \\(\\land\\).",
+    "hint": "Recuerde que en lógica existen dos leyes distributivas.",
+    "solution": "La disyunción se distribuye sobre la conjunción exactamente en la forma presentada.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-53",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\land(q\\lor r)\\) y \\(Q=(p\\land q)\\lor r\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí, por la ley distributiva.",
+      "No. Con \\(p=F,q=F,r=V\\), \\(P=F\\) y \\(Q=V\\).",
+      "No, porque \\(P\\) siempre es verdadera.",
+      "Sí, por asociatividad."
+    ],
+    "answer": "No. Con \\(p=F,q=F,r=V\\), \\(P=F\\) y \\(Q=V\\).",
+    "hint": "La distribución correcta exige repetir \\(p\\) en ambos términos.",
+    "solution": "La forma distributiva correcta es \\((p\\land q)\\lor(p\\land r)\\). En \\(Q\\), el término \\(r\\) quedó sin conjugar con \\(p\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-54",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\lor(p\\land q)\\) y \\(Q=p\\land(p\\lor q)\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Ambas se reducen a \\(p\\) por las dos formas de absorción.",
+      "No. Una se reduce a \\(p\\) y la otra a \\(q\\).",
+      "Sí, pero solo cuando \\(q\\) es verdadera.",
+      "No, porque \\(\\lor\\) y \\(\\land\\) no pueden intercambiarse."
+    ],
+    "answer": "Sí. Ambas se reducen a \\(p\\) por las dos formas de absorción.",
+    "hint": "Simplifique cada lado por separado.",
+    "solution": "\\(p\\lor(p\\land q)\\equiv p\\) y \\(p\\land(p\\lor q)\\equiv p\\); por tanto, las columnas son idénticas.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-55",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=\\neg(p\\rightarrow q)\\) y \\(Q=\\neg p\\lor q\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí, porque \\(\\neg p\\lor q\\) es la negación del condicional.",
+      "No. Con \\(p=F,q=F\\), \\(P=F\\) y \\(Q=V\\).",
+      "No, porque ambas son tautologías.",
+      "Sí, por doble negación."
+    ],
+    "answer": "No. Con \\(p=F,q=F\\), \\(P=F\\) y \\(Q=V\\).",
+    "hint": "La segunda fórmula es el condicional mismo, no su negación.",
+    "solution": "\\(\\neg(p\\rightarrow q)\\equiv p\\land\\neg q\\), mientras que \\(\\neg p\\lor q\\equiv p\\rightarrow q\\).",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-56",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=(p\\rightarrow q)\\lor(q\\rightarrow p)\\) y \\(Q=\\mathbf{V}\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. La disyunción de ambos condicionales es una tautología.",
+      "No. Es falsa cuando \\(p\\neq q\\).",
+      "Sí, pero únicamente cuando ambas son verdaderas.",
+      "No, porque los condicionales pueden ser simultáneamente falsos."
+    ],
+    "answer": "Sí. La disyunción de ambos condicionales es una tautología.",
+    "hint": "¿Pueden ambos condicionales ser falsos al mismo tiempo?",
+    "solution": "Para que \\(p\\rightarrow q\\) sea falso se necesita \\(p=V,q=F\\); en esa misma fila \\(q\\rightarrow p\\) es verdadero. El caso inverso funciona de manera simétrica.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-57",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\leftrightarrow q\\) y \\(Q=\\neg p\\leftrightarrow\\neg q\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Negar ambos lados conserva si sus valores coinciden.",
+      "No. Las negaciones siempre invierten el bicondicional.",
+      "Sí, pero solo cuando \\(p=q=V\\).",
+      "No, porque las variables ya no tienen el mismo valor."
+    ],
+    "answer": "Sí. Negar ambos lados conserva si sus valores coinciden.",
+    "hint": "Compare igualdad de valores antes y después de negar ambos.",
+    "solution": "Si \\(p\\) y \\(q\\) coinciden, sus negaciones también coinciden; si difieren, sus negaciones también difieren.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-58",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=p\\leftrightarrow q\\) y \\(Q=(p\\lor q)\\land\\neg(p\\land q)\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Ambas son verdaderas cuando las variables coinciden.",
+      "No. Con \\(p=V,q=V\\), \\(P=V\\) y \\(Q=F\\).",
+      "No, porque \\(P\\) siempre es falsa.",
+      "Sí, por la ley de De Morgan."
+    ],
+    "answer": "No. Con \\(p=V,q=V\\), \\(P=V\\) y \\(Q=F\\).",
+    "hint": "La segunda expresión representa “exactamente una verdadera”.",
+    "solution": "\\((p\\lor q)\\land\\neg(p\\land q)\\) es la disyunción exclusiva, mientras que el bicondicional exige valores iguales.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-59",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=(p\\rightarrow q)\\land(q\\rightarrow r)\\) y \\(Q=p\\rightarrow r\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí, por transitividad del condicional.",
+      "No. Con \\(p=F,q=V,r=F\\), \\(P=F\\) y \\(Q=V\\).",
+      "No, porque \\(p\\rightarrow r\\) siempre es falso.",
+      "Sí, porque la transitividad convierte una equivalencia en identidad."
+    ],
+    "answer": "No. Con \\(p=F,q=V,r=F\\), \\(P=F\\) y \\(Q=V\\).",
+    "hint": "La transitividad da una implicación válida desde la primera fórmula hacia la segunda, no una equivalencia.",
+    "solution": "Es tautológica la fórmula \\([(p\\rightarrow q)\\land(q\\rightarrow r)]\\rightarrow(p\\rightarrow r)\\), pero el antecedente y el consecuente no tienen la misma tabla de verdad.",
+    "sourceBank": "Logic Tetris"
+  },
+  {
+    "id": "TET-LOG-60",
+    "difficulty": "avanzado",
+    "type": "choice",
+    "topic": "Verificación de equivalencia lógica",
+    "title": "Desafío del Olimpo · Selección múltiple",
+    "prompt": "Considere las proposiciones \\(P=\\neg(p\\leftrightarrow q)\\) y \\(Q=p\\leftrightarrow\\neg q\\). ¿Son lógicamente equivalentes?",
+    "options": [
+      "Sí. Ambas son verdaderas exactamente cuando \\(p\\) y \\(q\\) tienen valores distintos.",
+      "No. Difieren cuando \\(p=q=F\\).",
+      "Sí, pero solo cuando \\(p=V\\).",
+      "No, porque un bicondicional nunca puede expresar desigualdad."
+    ],
+    "answer": "Sí. Ambas son verdaderas exactamente cuando \\(p\\) y \\(q\\) tienen valores distintos.",
+    "hint": "Negar uno de los lados de un bicondicional cambia coincidencia por diferencia.",
+    "solution": "\\(p\\leftrightarrow\\neg q\\) es verdadero cuando \\(p\\) coincide con el valor opuesto de \\(q\\), es decir, cuando \\(p\\neq q\\), igual que \\(\\neg(p\\leftrightarrow q)\\).",
+    "sourceBank": "Logic Tetris"
+  }
+]

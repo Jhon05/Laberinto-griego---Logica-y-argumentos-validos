@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="LABERINTO_OLIMPO_LOGICA_EVALUACION_V23_SCORM12" version="1.0"
+ xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+ xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG_OLIMPO_LOGICA">
+    <organization identifier="ORG_OLIMPO_LOGICA">
+      <title>Laberinto del Olimpo · Evaluación de Lógica v2.3</title>
+      <item identifier="ITEM_OLIMPO_LOGICA" identifierref="RES_OLIMPO_LOGICA">
+        <title>Laberinto del Olimpo · SCORM Brightspace</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES_OLIMPO_LOGICA" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="styles.css"/>
+      <file href="game.js"/>
+      <file href="scorm.js"/>
+      <file href="banco_unificado_134_preguntas.json"/>
+      <file href="README.md"/>
+      <file href="GUIA_BRIGHTSPACE_SCORM.md"/>
+      <file href="mathjax/tex-svg-full.js"/>
+      <file href="mathjax/LICENSE"/>
+    </resource>
+  </resources>
+</manifest>
